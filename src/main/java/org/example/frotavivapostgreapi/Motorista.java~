@@ -1,0 +1,4 @@
+package org.example.frotavivapostgre.model;
+
+public class Motorista {
+}

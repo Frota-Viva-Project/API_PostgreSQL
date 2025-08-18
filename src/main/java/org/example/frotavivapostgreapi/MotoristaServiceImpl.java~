@@ -1,0 +1,4 @@
+package org.example.frotavivapostgre.service.impl;
+
+public class MotoristaServiceImpl {
+}

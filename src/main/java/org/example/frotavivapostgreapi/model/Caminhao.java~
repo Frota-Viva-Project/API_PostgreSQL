@@ -1,0 +1,32 @@
+package org.example.frotavivapostgreapi.model;
+
+
+import jakarta.persistence.*;
+
+import java.util.List;
+
+@Entity
+@Table(name = "caminhao")
+public class Caminhao {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long idCaminhao;
+
+    private String modelo;
+    private String placa;
+    private Integer capacidade;
+    private String status;
+
+    @ManyToOne
+    @JoinColumn(name = "id_motorista")
+    private Motorista motorista;
+
+    @OneToOne(mappedBy = "caminhao")
+    private Arduino arduino;
+
+    @OneToMany(mappedBy = "caminhao")
+    private List<Manutencao> manutencoes;
+
+
+}
