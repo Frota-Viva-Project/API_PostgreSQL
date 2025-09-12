@@ -1,4 +1,4 @@
 package org.example.frotavivapostgreapi.controller;
 
-public class MotoristaController {
+public interface MotoristaController {
 }

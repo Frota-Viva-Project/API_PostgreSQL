@@ -1,10 +1,11 @@
 package org.example.frotavivapostgreapi.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-
 import java.util.List;
+import jakarta.persistence.*;
 
 @Getter
 @Setter
@@ -13,17 +14,6 @@ import java.util.List;
 public class Motorista {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idMotorista;
-
-    private String nome;
-    private String email;
-    private String senha;
-    private String telefoneMotorista;
-    private String telefoneEmpresa;
-    private String cnpjEmpresa;
-
-
-
+    private Long id;
 
 }

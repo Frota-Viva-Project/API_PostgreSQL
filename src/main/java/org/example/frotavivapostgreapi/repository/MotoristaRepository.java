@@ -1,4 +1,7 @@
 package org.example.frotavivapostgreapi.repository;
 
-public class MotoristaRepository {
+import org.example.frotavivapostgreapi.model.Motorista;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface MotoristaRepository extends JpaRepository<Motorista, Long> {
 }
