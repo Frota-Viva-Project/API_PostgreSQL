@@ -4,15 +4,61 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12f55ec4-a1a7-417a-a7ab-a4adc79d188e" name="Changes" comment="" />
+    <list default="true" id="12f55ec4-a1a7-417a-a7ab-a4adc79d188e" name="Changes" comment="Adicionando Dockerfile e o .env no gitigonore">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/FrotaVivaPostgreApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/FrotaVivaPostgreApiApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/controller/ArduinoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/controller/ArduinoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/controller/CaminhaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/controller/CaminhaoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/controller/ManutencaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/controller/ManutencaoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/controller/MotoristaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/controller/MotoristaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/controller/ServicoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/controller/ServicoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/model/Arduino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/model/Arduino.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/model/Caminhao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/model/Caminhao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/model/Manutencao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/model/Manutencao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/model/Motorista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/model/Motorista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/model/Servico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/model/Servico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/repository/ArduinoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/repository/ArduinoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/repository/CaminhaoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/repository/CaminhaoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/repository/ManutencaoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/repository/ManutencaoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/repository/MotoristaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/repository/MotoristaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/repository/ServicoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/repository/ServicoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/service/ArduinoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/service/ArduinoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/service/CaminhaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/service/CaminhaoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/service/ManutecaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/service/ManutecaoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/service/impl/ArduinoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/service/impl/ArduinoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/service/impl/CaminhaoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/service/impl/CaminhaoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/service/impl/ManutencaoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/service/impl/ManutencaoServiceImpl.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dockerfile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ArthurFormigoni&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Frota-Viva-Project/API_PostgreSQL.git&quot;,
+    &quot;accountId&quot;: &quot;edba5af9-78f7-465b-8a83-1bcaf0ce85c0&quot;
+  }
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -30,25 +76,34 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Maven. [clean,install,-DskipTests].executor": "Run",
+    "Maven. [install,-DskipTests].executor": "Run",
+    "Maven. [install].executor": "Run",
     "Maven.FrotaVivaPostgreApi [clean,install...].executor": "Run",
     "Maven.FrotaVivaPostgreApi [clean,install].executor": "Run",
     "Maven.FrotaVivaPostgreApi [clean].executor": "Run",
+    "Maven.FrotaVivaPostgreApi [install,-DskipTests].executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "Spring Boot.FrotaVivaPostgreApiApplication.executor": "Run",
     "com.codeium.enabled": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "TG-253-create-a-Dockerfile-for-the-project",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/arthurcruz-ieg/OneDrive - Instituto Germinare/Área de Trabalho/tech/DS2/FrotaVivaPostgreApi/src/main/java/org/example/frotavivapostgreapi",
+    "last_opened_file_path": "C:/Users/arthurcruz-ieg/OneDrive - Instituto Germinare/Área de Trabalho/tech/frota_viva/API_PostgreSQL",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.sourceCode.Java",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -61,23 +116,42 @@
     <option name="myCommands">
       <command value="mvn clean" />
       <command value="mvn clean install" />
+      <command value="mvn install" />
       <command value="mvn clean install -DskipTests" />
+      <command value="mvn install -DskipTests" />
     </option>
   </component>
   <component name="RunManager">
     <configuration name="FrotaVivaPostgreApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="FrotaVivaPostgreApi" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.frotavivapostgreapi.FrotaVivaPostgreApiApplication" />
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="true" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+          <ENTRY IS_ENABLED="true" PARSER="env" IS_EXECUTABLE="false" PATH=".env" />
+        </ENTRIES>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <method v="2" />
     </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.25659.59" />
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.25659.59" />
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.25557.131" />
+        <option value="bundled-js-predefined-d6986cc7102b-b598e85cdad2-JavaScript-IU-252.25557.131" />
       </set>
     </attachedChunks>
   </component>
@@ -92,10 +166,102 @@
       <workItem from="1755092436115" duration="12243000" />
       <workItem from="1755514963244" duration="2418000" />
       <workItem from="1755517465339" duration="63000" />
+      <workItem from="1755690334485" duration="24708000" />
+      <workItem from="1756124719958" duration="16911000" />
+      <workItem from="1756463538957" duration="3905000" />
+      <workItem from="1756475660360" duration="24115000" />
+      <workItem from="1756938324805" duration="1544000" />
+      <workItem from="1756982081763" duration="1083000" />
+      <workItem from="1756983207134" duration="195000" />
+      <workItem from="1756983424258" duration="1619000" />
+      <workItem from="1756985887500" duration="5970000" />
+      <workItem from="1757067130174" duration="306000" />
+      <workItem from="1757067474553" duration="5863000" />
+      <workItem from="1757081204040" duration="4000" />
+      <workItem from="1757081311505" duration="3703000" />
+      <workItem from="1757103855951" duration="624000" />
+      <workItem from="1757104523350" duration="3441000" />
+      <workItem from="1757284471710" duration="41000" />
+      <workItem from="1757284532122" duration="1039000" />
+      <workItem from="1757285600736" duration="959000" />
+      <workItem from="1757329030587" duration="95000" />
+      <workItem from="1757329209331" duration="13000" />
+      <workItem from="1757329241143" duration="9835000" />
+      <workItem from="1757412168500" duration="5723000" />
+      <workItem from="1757502233164" duration="1448000" />
+      <workItem from="1757509246422" duration="1450000" />
+      <workItem from="1757590669659" duration="9664000" />
+      <workItem from="1757682350990" duration="4584000" />
     </task>
+    <task id="LOCAL-00001" summary="Adicionando template de pull request">
+      <option name="closed" value="true" />
+      <created>1755865231746</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1755865231747</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Adicionando variaveis de ambiente .env">
+      <option name="closed" value="true" />
+      <created>1756295124231</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1756295124231</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Adicionando Dockerfile e o .env no gitigonore">
+      <option name="closed" value="true" />
+      <created>1756388742759</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1756388742759</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit" />
+    <MESSAGE value="Adicionando template de pull request" />
+    <MESSAGE value="Adicionando variaveis de ambiente .env" />
+    <MESSAGE value="Adicionando Dockerfile e o .env no gitigonore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adicionando Dockerfile e o .env no gitigonore" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/controller/impl/ArduinoControllerImpl.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/controller/impl/CaminhaoControllerImpl.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/controller/CaminhaoController.java</url>
+          <line>15</line>
+          <properties class="org.example.frotavivapostgreapi.controller.CaminhaoController">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/repository/ArduinoRepository.java</url>
+          <line>10</line>
+          <properties class="org.example.frotavivapostgreapi.repository.ArduinoRepository">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
