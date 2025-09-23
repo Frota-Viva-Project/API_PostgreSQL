@@ -23,7 +23,7 @@ public class Manutencao {
     private LocalDate dataInicio;
     private LocalDate dataConclusao;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne()
     @JoinColumn(name = "id_caminhao")
     @JsonBackReference
     private Caminhao caminhao;

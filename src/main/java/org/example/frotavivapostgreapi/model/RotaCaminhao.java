@@ -27,7 +27,7 @@ public class RotaCaminhao {
     private String estadoFinal;
     private Double distancia;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne()
     @JoinColumn(name = "id_caminhao")
     @JsonBackReference
     private Caminhao caminhao;

@@ -20,4 +20,9 @@ public class ManutencaoServiceImpl implements ManutecaoService {
     public Manutencao listById(@PathVariable("id_manutencao") Integer id_manutencao) {
         return manutencaoRepository.findById(id_manutencao);
     }
+
+    @Override
+    public List<Manutencao> listByIdCaminhao(@PathVariable("id_caminhao") Integer id_caminhao) {
+        return manutencaoRepository.findByIdCaminhao(id_caminhao);
+    }
 }

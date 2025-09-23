@@ -30,4 +30,13 @@ public class ManutencaoControllerImpl implements ManutencaoController {
         return ResponseEntity.ok(manutencao);
     }
 
+    @Override
+    public ResponseEntity<List<Manutencao>> listByIdCaminhao(@PathVariable("id_caminhao") Integer id_caminhao) {
+        List<Manutencao> manutencao = manutencaoService.listByIdCaminhao(id_caminhao);
+        if (manutencao == null) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(manutencao);
+    }
+
 }
