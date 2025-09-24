@@ -5,7 +5,9 @@ import com.google.firebase.FirebaseApp;
 import com.google.firebase.FirebaseOptions;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
+
 import javax.annotation.PostConstruct;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -15,14 +17,26 @@ public class FirebaseConfig {
     @PostConstruct
     public void initialize() {
         try {
-            InputStream serviceAccount = new ClassPathResource("frota-viva-project-firebase-adminsdk.json").getInputStream();
+            InputStream serviceAccount;
+
+            String firebaseConfigPath = System.getenv("FIREBASE_CONFIG");
+
+            if (firebaseConfigPath != null && !firebaseConfigPath.isEmpty()) {
+                System.out.println("Usando arquivo de credenciais do Firebase a partir da env FIREBASE_CONFIG: " + firebaseConfigPath);
+                serviceAccount = new FileInputStream(firebaseConfigPath);
+            } else {
+                System.out.println("Usando arquivo de credenciais do Firebase do classpath (resources).");
+                serviceAccount = new ClassPathResource("frota-viva-project-firebase-adminsdk.json").getInputStream();
+            }
 
             FirebaseOptions options = FirebaseOptions.builder()
                     .setCredentials(GoogleCredentials.fromStream(serviceAccount))
                     .build();
 
-            FirebaseApp.initializeApp(options);
-            System.out.println("Firebase Admin SDK inicializado com sucesso!");
+            if (FirebaseApp.getApps().isEmpty()) {
+                FirebaseApp.initializeApp(options);
+                System.out.println("Firebase Admin SDK inicializado com sucesso!");
+            }
 
         } catch (IOException e) {
             e.printStackTrace();
