@@ -1,4 +1,4 @@
 package org.example.frotavivapostgreapi.service;
 
-public class MotoristaService {
+public interface MotoristaService {
 }

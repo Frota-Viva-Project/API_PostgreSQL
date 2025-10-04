@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.Date;
 
 @Getter
 @Setter
@@ -73,7 +74,7 @@ public class Arduino {
     private String codigosDiagnosticoPendentes;
 
     @Column(name = "data_hora_leitura")
-    private LocalDateTime dataHoraLeitura;
+    private Date dataHoraLeitura;
 
     @OneToOne()
     @JoinColumn(name = "id_caminhao")

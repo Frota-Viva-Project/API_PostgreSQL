@@ -19,7 +19,7 @@ public class Caminhao {
 
     private String placa;
     private String modelo;
-    private Boolean status;
+    private String status;
     private Integer capacidade;
 
     @ManyToOne()

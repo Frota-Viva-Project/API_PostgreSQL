@@ -20,8 +20,6 @@ public class Manutencao {
 
     private String tipoManutencao;
     private Double tempoManutencao;
-    private LocalDate dataInicio;
-    private LocalDate dataConclusao;
 
     @ManyToOne()
     @JoinColumn(name = "id_caminhao")

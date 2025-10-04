@@ -5,27 +5,25 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.Date;
-
 @Getter
 @Setter
 @Entity
-@Table(name = "rota_caminhao")
-public class RotaCaminhao {
+@Table(name = "alerta")
+public class Alerta {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String destinoInicial;
-    private String destinoFinal;
-    private Double distancia;
-    private String status;
-    private Date dataChegadaPrevista;
+    private Boolean status;
+
+    private String tipoAlerta;
+
+    private String descricao;
 
     @ManyToOne()
     @JoinColumn(name = "id_caminhao")
     @JsonBackReference
     private Caminhao caminhao;
-}
 
+}

@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 
 @Getter
@@ -19,7 +20,8 @@ public class Servico {
 
     private String descServico;
     private Double custo;
-    private LocalDate data;
+    private Date dataInicio;
+    private Date dataConclusao;
 
     @ManyToOne
     @JoinColumn(name = "id_manutencao")

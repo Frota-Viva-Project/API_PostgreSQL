@@ -1,6 +1,9 @@
 package org.example.frotavivapostgreapi.controller.impl;
 
+import org.example.frotavivapostgreapi.Mapper.GlobalMapper;
 import org.example.frotavivapostgreapi.controller.CaminhaoController;
+import org.example.frotavivapostgreapi.dto.CaminhaoResponseDTO;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.repository.query.Param;
 import org.springframework.http.ResponseEntity;
 import org.example.frotavivapostgreapi.model.Caminhao;
@@ -19,13 +22,13 @@ import java.util.List;
 public class CaminhaoControllerImpl implements CaminhaoController {
     private final CaminhaoService caminhaoService;
 
-    public CaminhaoControllerImpl(CaminhaoRepository caminhaoRepository) {
-        this.caminhaoService = new CaminhaoServiceImpl(caminhaoRepository);
+    public CaminhaoControllerImpl(CaminhaoRepository caminhaoRepository, RedisTemplate<String, Object> redisTemplate, GlobalMapper globalMapper) {
+        this.caminhaoService = new CaminhaoServiceImpl(caminhaoRepository,redisTemplate,globalMapper);
     }
 
     @Override
-    public ResponseEntity<Caminhao> listById(@PathVariable("id_motorista") Integer id_motorista) {
-        Caminhao caminhao = caminhaoService.listarCaminhoes(id_motorista);
+    public ResponseEntity<CaminhaoResponseDTO> listById(@PathVariable("id_motorista") Integer id_motorista) {
+        CaminhaoResponseDTO caminhao = caminhaoService.listarCaminhoes(id_motorista);
         if (caminhao == null) {
             return ResponseEntity.notFound().build();
         }
