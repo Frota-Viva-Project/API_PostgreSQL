@@ -11,4 +11,5 @@ import java.util.List;
 public interface RotaCaminhaoService {
     List<RotaCaminhaoResponseDTO> listById(@PathVariable("id_caminhao") Integer id_caminhao);
 
+    RotaCaminhaoResponseDTO inseriRotaCaminhao(@RequestBody RotaCaminhaoRequestDTO rotaCaminhaoRequestDTO,@PathVariable("id_caminhao") Integer id_caminhao);
 }

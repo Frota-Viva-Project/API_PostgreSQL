@@ -16,4 +16,16 @@ public interface RotaCaminhaoRepository extends JpaRepository<RotaCaminhao, Long
 
     @Query(value = "SELECT * FROM rota_caminhao WHERE id_caminhao = :id_caminhao", nativeQuery = true)
     List<RotaCaminhao> findById(@PathVariable("id_caminhao") Integer id_caminhao);
+
+    @Modifying
+    @Transactional
+    @Query(value = "INSERT INTO rota_caminhao (id_caminhao, status, destino_inicial, destino_final, distancia, data_chegada_prevista) " +
+            "VALUES (:idCaminhao, :status, :destinoInicial, :destinoFinal, :distancia, :dataChegadaPrevista)",
+            nativeQuery = true)
+    void inserirRotaCaminhao(@Param("idCaminhao") Integer idCaminhao,
+                             @Param("status") String status,
+                             @Param("destinoInicial") String destinoInicial,
+                             @Param("destinoFinal") String destinoFinal,
+                             @Param("distancia") Double distancia,
+                             @Param("dataChegadaPrevista") Date dataChegadaPrevista);
 }

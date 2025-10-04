@@ -37,5 +37,14 @@ public class RotaCaminhaoControllerImpl implements RotaCaminhaoController {
         return ResponseEntity.ok(rotaCaminhao);
     }
 
+    @Override
+    public ResponseEntity<RotaCaminhaoResponseDTO> inseriRotaCaminhao(@RequestBody RotaCaminhaoRequestDTO rotaCaminhaoRequestDTO, @PathVariable("id_caminhao") Integer id_caminhao){
+        RotaCaminhaoResponseDTO rotaCaminhaoResponseDTO = rotaCaminhaoService.inseriRotaCaminhao(rotaCaminhaoRequestDTO,id_caminhao);
+        if ( rotaCaminhaoRequestDTO == null){
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(rotaCaminhaoResponseDTO);
+    }
+
 
 }

@@ -46,4 +46,18 @@ public class RotaCaminhaoServiceImpl implements RotaCaminhaoService {
         redisTemplate.opsForValue().set(cacheKey, responseDTO, Duration.ofMinutes(10));
         return responseDTO;
     }
+
+    @Override
+    public RotaCaminhaoResponseDTO inseriRotaCaminhao(@RequestBody RotaCaminhaoRequestDTO rotaCaminhaoRequestDTO,@PathVariable("id_caminhao") Integer id_caminhao){
+        RotaCaminhao rotaCaminhao = globalMapper.toRotaCaminhao(rotaCaminhaoRequestDTO);
+        rotaCaminhaoRepository.inserirRotaCaminhao(
+                id_caminhao,
+                "ATIVA",
+                rotaCaminhao.getDestinoInicial(),
+                rotaCaminhao.getDestinoFinal(),
+                rotaCaminhao.getDistancia(),
+                rotaCaminhao.getDataChegadaPrevista()
+        );
+        return globalMapper.toRotaCaminhaoDTO(rotaCaminhao);
+    }
 }
