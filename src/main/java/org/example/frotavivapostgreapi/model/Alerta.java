@@ -1,33 +1,29 @@
 package org.example.frotavivapostgreapi.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.time.LocalDate;
-import java.util.List;
-
 @Getter
 @Setter
 @Entity
-@Table(name = "manutencao")
-public class Manutencao {
+@Table(name = "alerta")
+public class Alerta {
     @Id
+    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String tipoManutencao;
-    private Double tempoManutencao;
+    private Boolean status;
+
+    private String tipoAlerta;
+
+    private String descricao;
 
     @ManyToOne()
     @JoinColumn(name = "id_caminhao")
     @JsonBackReference
     private Caminhao caminhao;
 
-    @OneToMany
-    @JoinColumn(name = "id_manutencao")
-    @JsonManagedReference
-    private List<Servico> servico;
 }

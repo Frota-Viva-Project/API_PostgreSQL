@@ -1,0 +1,52 @@
+package org.example.frotavivapostgreapi.service.impl;
+
+import org.example.frotavivapostgreapi.Mapper.GlobalMapper;
+import org.example.frotavivapostgreapi.dto.AlertaResponseDTO;
+import org.example.frotavivapostgreapi.dto.CaminhaoResponseDTO;
+import org.example.frotavivapostgreapi.model.Alerta;
+import org.example.frotavivapostgreapi.repository.AlertaRepository;
+import org.example.frotavivapostgreapi.repository.CaminhaoRepository;
+import org.example.frotavivapostgreapi.service.AlertaService;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
+
+public class AlertaServiceImpl implements AlertaService {
+
+    private final AlertaRepository alertaRepository;
+
+    private RedisTemplate<String, Object> redisTemplate;
+
+    private final GlobalMapper globalMapper;
+
+    public AlertaServiceImpl(AlertaRepository alertaRepository,
+                             RedisTemplate<String, Object> redisTemplate,
+                             GlobalMapper globalMapper) {
+        this.alertaRepository = alertaRepository;
+        this.redisTemplate = redisTemplate;
+        this.globalMapper = globalMapper;
+    }
+
+    @Override
+    public List<AlertaResponseDTO> listarAlertas(@PathVariable("id_caminhao") Integer id_caminhao){
+        String cacheKey = "alerta:"+ id_caminhao;
+
+        Object cache = redisTemplate.opsForValue().get(cacheKey);
+        if (cache != null) {
+            return (List<AlertaResponseDTO>) cache;
+        }
+
+        List<Alerta> alertas = alertaRepository.findById(id_caminhao);
+        List<AlertaResponseDTO> alertaResponseDTO = new ArrayList<>();
+        for (Alerta alerta : alertas) {
+            alertaResponseDTO.add(globalMapper.toAlertaDTO(alerta));
+        }
+        redisTemplate.opsForValue().set(cacheKey, alertaResponseDTO, Duration.ofMinutes(10));
+        return alertaResponseDTO;
+
+
+    }
+}
