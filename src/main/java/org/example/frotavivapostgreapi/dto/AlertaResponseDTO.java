@@ -14,7 +14,9 @@ public class AlertaResponseDTO {
 
     private Boolean status;
 
-    private String tipoAlerta;
+    private String titulo;
+
+    private String categoria;
 
     private String descricao;
 

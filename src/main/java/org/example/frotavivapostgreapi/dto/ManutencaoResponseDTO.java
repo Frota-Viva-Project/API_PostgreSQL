@@ -16,9 +16,9 @@ public class ManutencaoResponseDTO {
 
     private Long id;
 
-    private String tipoManutencao;
+    private String info;
 
-    private Double tempoManutencao;
+    private String titulo;
 
     private List<ServicoResponseDTO> servico;
 }

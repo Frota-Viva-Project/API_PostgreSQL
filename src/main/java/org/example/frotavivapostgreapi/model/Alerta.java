@@ -17,9 +17,11 @@ public class Alerta {
 
     private Boolean status;
 
-    private String tipoAlerta;
+    private String categoria;
 
     private String descricao;
+
+    private String titulo;
 
     @ManyToOne()
     @JoinColumn(name = "id_caminhao")
