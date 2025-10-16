@@ -22,8 +22,4 @@ public class CaminhaoResponseDTO {
     private MotoristaResponseDTO motorista;
 
     private ArduinoResponseDTO arduino;
-
-    private List<ManutencaoResponseDTO> manutencoes;
-
-    private List<RotaCaminhaoResponseDTO> rotas;
 }

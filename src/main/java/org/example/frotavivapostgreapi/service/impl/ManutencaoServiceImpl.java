@@ -1,13 +1,14 @@
 package org.example.frotavivapostgreapi.service.impl;
 
-import org.example.frotavivapostgreapi.Mapper.GlobalMapper;
+import org.example.frotavivapostgreapi.mapper.GlobalMapper;
+import org.example.frotavivapostgreapi.dto.ManutencaoRequestDTO;
 import org.example.frotavivapostgreapi.dto.ManutencaoResponseDTO;
 import org.example.frotavivapostgreapi.model.Manutencao;
 import org.example.frotavivapostgreapi.repository.ManutencaoRepository;
 import org.example.frotavivapostgreapi.service.ManutecaoService;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.time.Duration;
 import java.util.ArrayList;
@@ -45,5 +46,18 @@ public class ManutencaoServiceImpl implements ManutecaoService {
         }
         redisTemplate.opsForValue().set(cacheKey, manutencaoResponseDTO, Duration.ofMinutes(10));
         return manutencaoResponseDTO;
+    }
+
+    @Override
+    public ManutencaoResponseDTO inseriManutencao(@RequestBody ManutencaoRequestDTO manutencaoRequestDTO, @PathVariable("id_caminhao") Integer id_caminhao) {
+        String cacheKey = "manutencao:" + id_caminhao;
+
+        redisTemplate.delete(cacheKey);
+
+        Manutencao manutencao = globalMapper.toManutencao(manutencaoRequestDTO);
+        Integer id = manutencaoRepository.inserirManutencao(id_caminhao, manutencao.getInfo(), manutencao.getTitulo());
+        manutencao.setStatus(true);
+        manutencao.setId(id.longValue());
+        return globalMapper.toManutencaoDTO(manutencao);
     }
 }

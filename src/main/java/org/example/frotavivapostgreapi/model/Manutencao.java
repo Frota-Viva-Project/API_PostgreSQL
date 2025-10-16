@@ -17,7 +17,7 @@ public class Manutencao {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    private Boolean status;
     private String info;
     private String titulo;
 

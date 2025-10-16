@@ -1,9 +1,8 @@
 package org.example.frotavivapostgreapi.controller.impl;
 
-import org.example.frotavivapostgreapi.Mapper.GlobalMapper;
+import org.example.frotavivapostgreapi.mapper.GlobalMapper;
 import org.example.frotavivapostgreapi.controller.ArduinoController;
 import org.example.frotavivapostgreapi.dto.ArduinoResponseDTO;
-import org.example.frotavivapostgreapi.model.Arduino;
 import org.example.frotavivapostgreapi.repository.ArduinoRepository;
 import org.example.frotavivapostgreapi.service.ArduinoService;
 import org.example.frotavivapostgreapi.service.impl.ArduinoServiceImpl;

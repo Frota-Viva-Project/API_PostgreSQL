@@ -1,18 +1,16 @@
 package org.example.frotavivapostgreapi.controller.impl;
 
-import org.example.frotavivapostgreapi.Mapper.GlobalMapper;
+import org.example.frotavivapostgreapi.mapper.GlobalMapper;
 import org.example.frotavivapostgreapi.controller.AlertaController;
+import org.example.frotavivapostgreapi.dto.AlertaRequestDTO;
 import org.example.frotavivapostgreapi.dto.AlertaResponseDTO;
-import org.example.frotavivapostgreapi.model.Alerta;
 import org.example.frotavivapostgreapi.repository.AlertaRepository;
-import org.example.frotavivapostgreapi.repository.ArduinoRepository;
 import org.example.frotavivapostgreapi.service.AlertaService;
-import org.example.frotavivapostgreapi.service.CaminhaoService;
 import org.example.frotavivapostgreapi.service.impl.AlertaServiceImpl;
-import org.example.frotavivapostgreapi.service.impl.ArduinoServiceImpl;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -34,5 +32,13 @@ public class AlertaControllerImpl implements AlertaController {
             return ResponseEntity.noContent().build();
         }
         return ResponseEntity.ok(alertas);
+    }
+
+    public ResponseEntity<AlertaResponseDTO> inserirAlerta(@PathVariable("id_caminhao") Integer id_caminhao, @RequestBody AlertaRequestDTO alertaRequestDTO){
+        AlertaResponseDTO alerta = alertaService.inserirAlerta(id_caminhao, alertaRequestDTO);
+        if (alerta == null) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(alerta);
     }
 }

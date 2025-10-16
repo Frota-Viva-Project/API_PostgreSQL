@@ -1,14 +1,11 @@
 package org.example.frotavivapostgreapi.controller.impl;
 
-import org.example.frotavivapostgreapi.Mapper.GlobalMapper;
+import org.example.frotavivapostgreapi.mapper.GlobalMapper;
 import org.example.frotavivapostgreapi.controller.RotaCaminhaoController;
 import org.example.frotavivapostgreapi.dto.RotaCaminhaoRequestDTO;
 import org.example.frotavivapostgreapi.dto.RotaCaminhaoResponseDTO;
-import org.example.frotavivapostgreapi.model.RotaCaminhao;
-import org.example.frotavivapostgreapi.repository.ManutencaoRepository;
 import org.example.frotavivapostgreapi.repository.RotaCaminhaoRepository;
 import org.example.frotavivapostgreapi.service.RotaCaminhaoService;
-import org.example.frotavivapostgreapi.service.impl.ManutencaoServiceImpl;
 import org.example.frotavivapostgreapi.service.impl.RotaCaminhaoServiceImpl;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.http.ResponseEntity;

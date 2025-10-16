@@ -1,11 +1,10 @@
 package org.example.frotavivapostgreapi.service.impl;
 
-import org.example.frotavivapostgreapi.Mapper.GlobalMapper;
+import org.example.frotavivapostgreapi.mapper.GlobalMapper;
+import org.example.frotavivapostgreapi.dto.AlertaRequestDTO;
 import org.example.frotavivapostgreapi.dto.AlertaResponseDTO;
-import org.example.frotavivapostgreapi.dto.CaminhaoResponseDTO;
 import org.example.frotavivapostgreapi.model.Alerta;
 import org.example.frotavivapostgreapi.repository.AlertaRepository;
-import org.example.frotavivapostgreapi.repository.CaminhaoRepository;
 import org.example.frotavivapostgreapi.service.AlertaService;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -48,5 +47,17 @@ public class AlertaServiceImpl implements AlertaService {
         return alertaResponseDTO;
 
 
+    }
+
+    @Override
+    public AlertaResponseDTO inserirAlerta(@PathVariable("id_caminhao") Integer id_caminhao, AlertaRequestDTO alertaRequestDTO){
+        String cacheKey = "alerta:" + id_caminhao;
+        redisTemplate.delete(cacheKey);
+
+        Alerta alerta = globalMapper.toAlerta(alertaRequestDTO);
+        Integer id = alertaRepository.inserirAlerta(id_caminhao,alerta.getDescricao(),alerta.getTitulo(),alerta.getCategoria());
+        alerta.setStatus(true);
+        alerta.setId(id.longValue());
+        return globalMapper.toAlertaDTO(alerta);
     }
 }

@@ -1,6 +1,6 @@
 package org.example.frotavivapostgreapi.service.impl;
 
-import org.example.frotavivapostgreapi.Mapper.GlobalMapper;
+import org.example.frotavivapostgreapi.mapper.GlobalMapper;
 import org.example.frotavivapostgreapi.dto.RotaCaminhaoRequestDTO;
 import org.example.frotavivapostgreapi.dto.RotaCaminhaoResponseDTO;
 import org.example.frotavivapostgreapi.model.RotaCaminhao;
@@ -49,15 +49,19 @@ public class RotaCaminhaoServiceImpl implements RotaCaminhaoService {
 
     @Override
     public RotaCaminhaoResponseDTO inseriRotaCaminhao(@RequestBody RotaCaminhaoRequestDTO rotaCaminhaoRequestDTO,@PathVariable("id_caminhao") Integer id_caminhao){
+        String cacheKey = "rota_caminhao:" + id_caminhao;
+        redisTemplate.delete(cacheKey);
+
         RotaCaminhao rotaCaminhao = globalMapper.toRotaCaminhao(rotaCaminhaoRequestDTO);
-        rotaCaminhaoRepository.inserirRotaCaminhao(
+        Integer id = rotaCaminhaoRepository.inserirRotaCaminhao(
                 id_caminhao,
-                "ATIVA",
                 rotaCaminhao.getDestinoInicial(),
                 rotaCaminhao.getDestinoFinal(),
                 rotaCaminhao.getDistancia(),
                 rotaCaminhao.getDataChegadaPrevista()
         );
+        rotaCaminhao.setStatus("ATIVA");
+        rotaCaminhao.setId(id.longValue());
         return globalMapper.toRotaCaminhaoDTO(rotaCaminhao);
     }
 }

@@ -12,7 +12,7 @@ public class Empresa {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
     private String nome;
 
@@ -33,4 +33,10 @@ public class Empresa {
     private String telefone;
 
     private String endereco;
+
+    private String email;
+
+    private String senha;
+
+    private String cod_empresa;
 }

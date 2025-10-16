@@ -16,6 +16,8 @@ public class ManutencaoResponseDTO {
 
     private Long id;
 
+    private Boolean status;
+
     private String info;
 
     private String titulo;
