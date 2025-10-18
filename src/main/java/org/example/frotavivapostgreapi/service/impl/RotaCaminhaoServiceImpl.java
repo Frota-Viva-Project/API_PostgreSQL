@@ -7,6 +7,7 @@ import org.example.frotavivapostgreapi.model.RotaCaminhao;
 import org.example.frotavivapostgreapi.repository.RotaCaminhaoRepository;
 import org.example.frotavivapostgreapi.service.RotaCaminhaoService;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.repository.query.Param;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 
@@ -63,5 +64,19 @@ public class RotaCaminhaoServiceImpl implements RotaCaminhaoService {
         rotaCaminhao.setStatus("ATIVA");
         rotaCaminhao.setId(id.longValue());
         return globalMapper.toRotaCaminhaoDTO(rotaCaminhao);
+    }
+
+    @Override
+    public void updateStatusToEmRota(@Param("id_rotacaminhao") Integer id_rotacaminhao, @Param("id_caminhao") Integer id_caminhao) {
+        String cacheKey = "rota_caminhao:" + id_caminhao;
+        redisTemplate.delete(cacheKey);
+        rotaCaminhaoRepository.updateStatusToEmRota(id_rotacaminhao);
+    }
+
+    @Override
+    public void updateStatusToConcluido(@Param("id_rotacaminhao") Integer id_rotacaminhao, @Param("id_caminhao") Integer id_caminhao) {
+        String cacheKey = "rota_caminhao:" + id_caminhao;
+        redisTemplate.delete(cacheKey);
+        rotaCaminhaoRepository.updateStatusToFinalizada(id_rotacaminhao);
     }
 }

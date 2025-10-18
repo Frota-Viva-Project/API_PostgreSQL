@@ -8,10 +8,12 @@ import org.example.frotavivapostgreapi.repository.AlertaRepository;
 import org.example.frotavivapostgreapi.service.AlertaService;
 import org.example.frotavivapostgreapi.service.impl.AlertaServiceImpl;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -40,5 +42,10 @@ public class AlertaControllerImpl implements AlertaController {
             return ResponseEntity.notFound().build();
         }
         return ResponseEntity.ok(alerta);
+    }
+
+    public ResponseEntity<HttpStatus> finalizarAlerta(@RequestParam("id_alerta") Integer id_alerta, @RequestParam("id_caminhao") Integer id_caminhao){
+        alertaService.finalizarAlerta(id_alerta, id_caminhao);
+        return ResponseEntity.ok(HttpStatus.OK);
     }
 }

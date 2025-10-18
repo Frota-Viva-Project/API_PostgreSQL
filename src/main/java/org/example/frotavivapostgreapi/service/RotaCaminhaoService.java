@@ -3,6 +3,7 @@ package org.example.frotavivapostgreapi.service;
 import org.example.frotavivapostgreapi.dto.RotaCaminhaoRequestDTO;
 import org.example.frotavivapostgreapi.dto.RotaCaminhaoResponseDTO;
 import org.example.frotavivapostgreapi.model.RotaCaminhao;
+import org.springframework.data.repository.query.Param;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 
@@ -12,4 +13,8 @@ public interface RotaCaminhaoService {
     List<RotaCaminhaoResponseDTO> listById(@PathVariable("id_caminhao") Integer id_caminhao);
 
     RotaCaminhaoResponseDTO inseriRotaCaminhao(@RequestBody RotaCaminhaoRequestDTO rotaCaminhaoRequestDTO,@PathVariable("id_caminhao") Integer id_caminhao);
+
+    void updateStatusToEmRota(@Param("id_rotacaminhao") Integer id_rotacaminhao, @Param("id_caminhao") Integer id_caminhao);
+
+    void updateStatusToConcluido(@Param("id_rotacaminhao") Integer id_rotacaminhao, @Param("id_caminhao") Integer id_caminhao);
 }

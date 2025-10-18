@@ -1,5 +1,6 @@
 package org.example.frotavivapostgreapi.service;
 
+import io.lettuce.core.dynamic.annotation.Param;
 import org.example.frotavivapostgreapi.dto.AlertaRequestDTO;
 import org.example.frotavivapostgreapi.dto.AlertaResponseDTO;
 import org.example.frotavivapostgreapi.model.Alerta;
@@ -13,4 +14,6 @@ public interface AlertaService {
     List<AlertaResponseDTO> listarAlertas(@PathVariable("id_caminhao") Integer id_caminhao);
 
     AlertaResponseDTO inserirAlerta(@PathVariable("id_caminhao") Integer id_caminhao,@RequestBody AlertaRequestDTO alertaRequestDTO);
+
+    void finalizarAlerta(@Param("id_alert") Integer id_alerta, @Param("id_caminhao") Integer id_caminhao);
 }

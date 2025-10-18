@@ -1,5 +1,6 @@
 package org.example.frotavivapostgreapi.service.impl;
 
+import io.lettuce.core.dynamic.annotation.Param;
 import org.example.frotavivapostgreapi.mapper.GlobalMapper;
 import org.example.frotavivapostgreapi.dto.ManutencaoRequestDTO;
 import org.example.frotavivapostgreapi.dto.ManutencaoResponseDTO;
@@ -59,5 +60,14 @@ public class ManutencaoServiceImpl implements ManutecaoService {
         manutencao.setStatus(true);
         manutencao.setId(id.longValue());
         return globalMapper.toManutencaoDTO(manutencao);
+    }
+
+    @Override
+    public void finalizarManutencao(@Param("id_manutencao") Integer id_manutencao, @Param("id_caminhao") Integer id_caminhao) {
+        String cacheKey = "manutencao:" + id_caminhao;
+
+        redisTemplate.delete(cacheKey);
+
+        manutencaoRepository.finalizarManutencao(id_manutencao);
     }
 }

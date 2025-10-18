@@ -1,5 +1,6 @@
 package org.example.frotavivapostgreapi.service.impl;
 
+import io.lettuce.core.dynamic.annotation.Param;
 import org.example.frotavivapostgreapi.mapper.GlobalMapper;
 import org.example.frotavivapostgreapi.dto.AlertaRequestDTO;
 import org.example.frotavivapostgreapi.dto.AlertaResponseDTO;
@@ -59,5 +60,12 @@ public class AlertaServiceImpl implements AlertaService {
         alerta.setStatus(true);
         alerta.setId(id.longValue());
         return globalMapper.toAlertaDTO(alerta);
+    }
+
+    @Override
+    public void finalizarAlerta(@Param("id_alert") Integer id_alerta,@Param("id_caminhao") Integer id_caminhao){
+        String cacheKey = "alerta:" + id_caminhao;
+        redisTemplate.delete(cacheKey);
+        alertaRepository.finalizarAlerta(id_alerta);
     }
 }

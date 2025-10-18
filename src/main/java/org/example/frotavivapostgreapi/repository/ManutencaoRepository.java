@@ -23,4 +23,10 @@ public interface ManutencaoRepository extends JpaRepository<Manutencao, Long> {
     Integer inserirManutencao(@Param("idCaminhao") Integer idCaminhao,
                            @Param("info") String info,
                            @Param("titulo") String titulo);
+
+    @Modifying
+    @Transactional
+    @Query(value = "UPDATE manutencao SET status = false WHERE id = :id_manutencao",
+            nativeQuery = true)
+    void finalizarManutencao(@PathVariable("id_manutencao") Integer id_manutencao);
 }

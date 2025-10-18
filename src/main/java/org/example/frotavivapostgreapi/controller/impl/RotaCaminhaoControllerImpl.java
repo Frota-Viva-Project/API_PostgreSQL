@@ -8,11 +8,9 @@ import org.example.frotavivapostgreapi.repository.RotaCaminhaoRepository;
 import org.example.frotavivapostgreapi.service.RotaCaminhaoService;
 import org.example.frotavivapostgreapi.service.impl.RotaCaminhaoServiceImpl;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -41,6 +39,18 @@ public class RotaCaminhaoControllerImpl implements RotaCaminhaoController {
             return ResponseEntity.notFound().build();
         }
         return ResponseEntity.ok(rotaCaminhaoResponseDTO);
+    }
+
+    @Override
+    public ResponseEntity<HttpStatus> updateStatusToEmRota(@RequestParam("id_rotacaminhao") Integer id_rotacaminhao, @RequestParam("id_caminhao") Integer id_caminhao) {
+        rotaCaminhaoService.updateStatusToEmRota(id_rotacaminhao, id_caminhao);
+        return ResponseEntity.ok(HttpStatus.OK);
+    }
+
+    @Override
+    public ResponseEntity<HttpStatus> updateStatusToFinalizada(@RequestParam("id_rotacaminhao") Integer id_rotacaminhao, @RequestParam("id_caminhao") Integer id_caminhao) {
+        rotaCaminhaoService.updateStatusToConcluido(id_rotacaminhao, id_caminhao);
+        return ResponseEntity.ok(HttpStatus.OK);
     }
 
 

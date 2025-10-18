@@ -1,5 +1,6 @@
 package org.example.frotavivapostgreapi.controller.impl;
 
+import io.lettuce.core.dynamic.annotation.Param;
 import org.example.frotavivapostgreapi.mapper.GlobalMapper;
 import org.example.frotavivapostgreapi.controller.ManutencaoController;
 import org.example.frotavivapostgreapi.dto.ManutencaoRequestDTO;
@@ -8,10 +9,12 @@ import org.example.frotavivapostgreapi.repository.ManutencaoRepository;
 import org.example.frotavivapostgreapi.service.ManutecaoService;
 import org.example.frotavivapostgreapi.service.impl.ManutencaoServiceImpl;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -42,6 +45,13 @@ public class ManutencaoControllerImpl implements ManutencaoController {
             return ResponseEntity.notFound().build();
         }
         return ResponseEntity.ok(manutencao);
+    }
+
+    @Override
+    public ResponseEntity<HttpStatus> finalizarManutencao(@RequestParam Integer id_manuntecao,@RequestParam("id_caminhao") Integer id_caminhao) {
+        manutencaoService.finalizarManutencao(id_manuntecao,id_caminhao);
+        return ResponseEntity.ok(HttpStatus.OK);
+
     }
 
 }

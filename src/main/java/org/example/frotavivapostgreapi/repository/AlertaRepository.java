@@ -25,4 +25,10 @@ public interface AlertaRepository extends JpaRepository<Alerta, Long> {
                            @Param("descricao") String descricao,
                            @Param("titulo") String titulo,
                            @Param("categoria") String categoria);
+
+    @Modifying
+    @Transactional
+    @Query(value = "UPDATE alerta SET status = false WHERE id = :id_alerta",
+            nativeQuery = true)
+    Integer finalizarAlerta(@Param("id_alerta") Integer id_alerta);
 }
