@@ -1,21 +1,16 @@
 package org.example.frotavivapostgreapi.controller.impl;
 
-import org.example.frotavivapostgreapi.Mapper.GlobalMapper;
+import org.example.frotavivapostgreapi.mapper.GlobalMapper;
 import org.example.frotavivapostgreapi.controller.CaminhaoController;
 import org.example.frotavivapostgreapi.dto.CaminhaoResponseDTO;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.repository.query.Param;
 import org.springframework.http.ResponseEntity;
-import org.example.frotavivapostgreapi.model.Caminhao;
 import org.example.frotavivapostgreapi.repository.CaminhaoRepository;
 import org.example.frotavivapostgreapi.service.CaminhaoService;
 import org.example.frotavivapostgreapi.service.impl.CaminhaoServiceImpl;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("v1/api")

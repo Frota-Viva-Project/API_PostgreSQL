@@ -17,9 +17,9 @@ public class Manutencao {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    private String tipoManutencao;
-    private Double tempoManutencao;
+    private Boolean status;
+    private String info;
+    private String titulo;
 
     @ManyToOne()
     @JoinColumn(name = "id_caminhao")

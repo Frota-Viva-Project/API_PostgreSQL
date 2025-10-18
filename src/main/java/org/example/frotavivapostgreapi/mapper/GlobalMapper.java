@@ -1,4 +1,4 @@
-package org.example.frotavivapostgreapi.Mapper;
+package org.example.frotavivapostgreapi.mapper;
 
 import org.example.frotavivapostgreapi.dto.*;
 import org.example.frotavivapostgreapi.model.*;
@@ -10,6 +10,8 @@ public interface GlobalMapper {
     CaminhaoResponseDTO toCaminhaoDTO(Caminhao caminhao);
 
     Caminhao toCaminhao(CaminhaoResponseDTO dto);
+
+    Caminhao toCaminhao(CaminhaoRequestDTO dto);
 
     MotoristaResponseDTO toMotoristaDTO(Motorista motorista);
 
@@ -23,6 +25,8 @@ public interface GlobalMapper {
 
     Manutencao toManutencao(ManutencaoResponseDTO dto);
 
+    Manutencao toManutencao(ManutencaoRequestDTO dto);
+
     RotaCaminhaoResponseDTO toRotaCaminhaoDTO(RotaCaminhao rotaCaminhao);
 
     RotaCaminhao toRotaCaminhao(RotaCaminhaoRequestDTO caminhaoRequestDTO);
@@ -33,9 +37,13 @@ public interface GlobalMapper {
 
     Alerta toAlerta(AlertaResponseDTO dto);
 
+    Alerta toAlerta(AlertaRequestDTO dto);
+
     EmpresaResponseDTO toEmpresaDTO(Empresa empresa);
 
     Empresa toEmpresa(EmpresaResponseDTO dto);
+
+    Empresa toEmpresa(EmpresaRequestDTO dto);
 
     ServicoResponseDTO toServicoDTO(Servico servico);
 
