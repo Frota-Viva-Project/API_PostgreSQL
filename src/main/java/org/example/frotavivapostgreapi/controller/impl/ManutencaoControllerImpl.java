@@ -1,6 +1,8 @@
 package org.example.frotavivapostgreapi.controller.impl;
 
 import io.lettuce.core.dynamic.annotation.Param;
+import jakarta.persistence.EntityNotFoundException;
+import jakarta.validation.Valid;
 import org.example.frotavivapostgreapi.mapper.GlobalMapper;
 import org.example.frotavivapostgreapi.controller.ManutencaoController;
 import org.example.frotavivapostgreapi.dto.ManutencaoRequestDTO;
@@ -32,18 +34,15 @@ public class ManutencaoControllerImpl implements ManutencaoController {
     @Override
     public ResponseEntity<List<ManutencaoResponseDTO>> listByIdCaminhao(@PathVariable("id_caminhao") Integer id_caminhao) {
         List<ManutencaoResponseDTO> manutencao = manutencaoService.listByIdCaminhao(id_caminhao);
-        if (manutencao == null) {
-            return ResponseEntity.notFound().build();
+        if (manutencao.isEmpty()) {
+            throw new EntityNotFoundException("Manutenção não encontrada com o id_caminhao: "+id_caminhao);
         }
         return ResponseEntity.ok(manutencao);
     }
 
     @Override
-    public ResponseEntity<ManutencaoResponseDTO> inseriManutencao(@RequestBody ManutencaoRequestDTO manutencaoRequestDTO, @PathVariable("id_caminhao") Integer id_caminhao) {
+    public ResponseEntity<ManutencaoResponseDTO> inseriManutencao(@Valid @RequestBody ManutencaoRequestDTO manutencaoRequestDTO, @PathVariable("id_caminhao") Integer id_caminhao) {
         ManutencaoResponseDTO manutencao = manutencaoService.inseriManutencao(manutencaoRequestDTO, id_caminhao);
-        if (manutencao == null) {
-            return ResponseEntity.notFound().build();
-        }
         return ResponseEntity.ok(manutencao);
     }
 

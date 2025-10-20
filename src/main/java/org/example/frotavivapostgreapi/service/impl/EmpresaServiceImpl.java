@@ -46,7 +46,8 @@ public class EmpresaServiceImpl implements EmpresaService {
         Empresa empresa = globalMapper.toEmpresa(empresaRequestDTO);
         String cod_empresa = empresa.getNome().toLowerCase().replace(" ", "_");
         empresa.setCod_empresa(cod_empresa);
-        empresaRepository.inserirEmpresa(empresa.getNome(), empresa.getCnpj(), empresa.getTamanhoEmpresa(), empresa.getTamanhoFrota(), empresa.getTipoEmpresa(), empresa.getAreaAtuacao(), empresa.getRazaoSocial(), empresa.getCnae(), empresa.getTelefone(), empresa.getEndereco(),empresa.getCod_empresa() );
+        Integer id = empresaRepository.inserirEmpresa(empresa.getNome(), empresa.getCnpj(), empresa.getTamanhoEmpresa(), empresa.getTamanhoFrota(), empresa.getTipoEmpresa(), empresa.getAreaAtuacao(), empresa.getRazaoSocial(), empresa.getCnae(), empresa.getTelefone(), empresa.getEndereco(),empresa.getCod_empresa() );
+        empresa.setId(id.longValue());
         return globalMapper.toEmpresaDTO(empresa);
     }
 }

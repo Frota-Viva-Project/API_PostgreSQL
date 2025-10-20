@@ -1,5 +1,7 @@
 package org.example.frotavivapostgreapi.controller.impl;
 
+import jakarta.persistence.EntityNotFoundException;
+import jakarta.validation.Valid;
 import org.example.frotavivapostgreapi.dto.EmpresaRequestDTO;
 import org.example.frotavivapostgreapi.mapper.GlobalMapper;
 import org.example.frotavivapostgreapi.controller.EmpresaController;
@@ -27,17 +29,14 @@ public class EmpresaControllerImpl implements EmpresaController {
     public ResponseEntity<EmpresaResponseDTO> listById(@PathVariable("id_empresa") Integer id_empresa) {
         EmpresaResponseDTO empresa = empresaService.listById(id_empresa);
         if (empresa == null) {
-            return ResponseEntity.notFound().build();
+            throw new EntityNotFoundException("Empresa não encontrada com o id: "+id_empresa);
         }
         return ResponseEntity.ok(empresa);
     }
 
     @Override
-    public ResponseEntity<EmpresaResponseDTO> inserirEmpresa(@RequestBody EmpresaRequestDTO empresaRequestDTO) {
+    public ResponseEntity<EmpresaResponseDTO> inserirEmpresa(@Valid @RequestBody EmpresaRequestDTO empresaRequestDTO) {
         EmpresaResponseDTO empresa = empresaService.inserirEmpresa(empresaRequestDTO);
-        if (empresa == null) {
-            return ResponseEntity.notFound().build();
-        }
         return ResponseEntity.ok(empresa);
     }
 }

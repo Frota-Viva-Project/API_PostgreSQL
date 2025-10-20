@@ -1,5 +1,6 @@
 package org.example.frotavivapostgreapi.controller.impl;
 
+import jakarta.validation.Valid;
 import org.example.frotavivapostgreapi.controller.MotoristaController;
 import org.example.frotavivapostgreapi.dto.CaminhaoRequestDTO;
 import org.example.frotavivapostgreapi.dto.CaminhaoResponseDTO;
@@ -28,7 +29,7 @@ public class MotoristaControllerImpl implements MotoristaController {
     }
 
 
-    public ResponseEntity<CaminhaoResponseDTO> inserirMotorista(@RequestBody CaminhaoRequestDTO caminhaoRequestDTO, @PathVariable("id_motorista") Integer id_motorista, @RequestParam("cod_empresa") String cod_empresa){
+    public ResponseEntity<CaminhaoResponseDTO> inserirMotorista(@Valid @RequestBody CaminhaoRequestDTO caminhaoRequestDTO, @PathVariable("id_motorista") Integer id_motorista, @RequestParam("cod_empresa") String cod_empresa){
         return ResponseEntity.ok(motoristaService.inseriMotorista(id_motorista, caminhaoRequestDTO, cod_empresa));
     }
 
