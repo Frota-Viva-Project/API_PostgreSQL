@@ -1,5 +1,7 @@
 package org.example.frotavivapostgreapi.controller.impl;
 
+import jakarta.persistence.EntityNotFoundException;
+import jakarta.validation.Valid;
 import org.example.frotavivapostgreapi.mapper.GlobalMapper;
 import org.example.frotavivapostgreapi.controller.RotaCaminhaoController;
 import org.example.frotavivapostgreapi.dto.RotaCaminhaoRequestDTO;
@@ -26,18 +28,15 @@ public class RotaCaminhaoControllerImpl implements RotaCaminhaoController {
     @Override
     public ResponseEntity<List<RotaCaminhaoResponseDTO>> listById(@PathVariable("id_caminhao") Integer id_caminhao) {
         List<RotaCaminhaoResponseDTO> rotaCaminhao = rotaCaminhaoService.listById(id_caminhao);
-        if (rotaCaminhao == null) {
-            return ResponseEntity.notFound().build();
+        if (rotaCaminhao.isEmpty()) {
+            throw new EntityNotFoundException("Rota não encotrada com o id_caminhao: "+id_caminhao);
         }
         return ResponseEntity.ok(rotaCaminhao);
     }
 
     @Override
-    public ResponseEntity<RotaCaminhaoResponseDTO> inseriRotaCaminhao(@RequestBody RotaCaminhaoRequestDTO rotaCaminhaoRequestDTO, @PathVariable("id_caminhao") Integer id_caminhao){
+    public ResponseEntity<RotaCaminhaoResponseDTO> inseriRotaCaminhao(@Valid @RequestBody RotaCaminhaoRequestDTO rotaCaminhaoRequestDTO, @PathVariable("id_caminhao") Integer id_caminhao){
         RotaCaminhaoResponseDTO rotaCaminhaoResponseDTO = rotaCaminhaoService.inseriRotaCaminhao(rotaCaminhaoRequestDTO,id_caminhao);
-        if ( rotaCaminhaoRequestDTO == null){
-            return ResponseEntity.notFound().build();
-        }
         return ResponseEntity.ok(rotaCaminhaoResponseDTO);
     }
 

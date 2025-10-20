@@ -1,5 +1,6 @@
 package org.example.frotavivapostgreapi.controller.impl;
 
+import jakarta.persistence.EntityNotFoundException;
 import org.example.frotavivapostgreapi.mapper.GlobalMapper;
 import org.example.frotavivapostgreapi.controller.ArduinoController;
 import org.example.frotavivapostgreapi.dto.ArduinoResponseDTO;
@@ -25,7 +26,7 @@ public class ArduinoControllerImpl implements ArduinoController {
     public ResponseEntity<ArduinoResponseDTO> listById(@PathVariable("id_caminhao") Integer id) {
         ArduinoResponseDTO arduino = arduinoService.listById(id);
         if (arduino == null) {
-            return ResponseEntity.notFound().build();
+            throw new EntityNotFoundException("Arduino não encontrado com o id_caminhao: "+id);
         }
         return ResponseEntity.ok(arduino);
     }

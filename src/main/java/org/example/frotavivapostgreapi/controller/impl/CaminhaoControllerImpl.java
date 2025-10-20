@@ -1,5 +1,6 @@
 package org.example.frotavivapostgreapi.controller.impl;
 
+import jakarta.persistence.EntityNotFoundException;
 import org.example.frotavivapostgreapi.mapper.GlobalMapper;
 import org.example.frotavivapostgreapi.controller.CaminhaoController;
 import org.example.frotavivapostgreapi.dto.CaminhaoResponseDTO;
@@ -25,7 +26,7 @@ public class CaminhaoControllerImpl implements CaminhaoController {
     public ResponseEntity<CaminhaoResponseDTO> listById(@PathVariable("id_motorista") Integer id_motorista) {
         CaminhaoResponseDTO caminhao = caminhaoService.listarCaminhoes(id_motorista);
         if (caminhao == null) {
-            return ResponseEntity.notFound().build();
+            throw new EntityNotFoundException("Caminhão não encontrado com o id_motorista: "+id_motorista);
         }
         return ResponseEntity.ok(caminhao);
     }

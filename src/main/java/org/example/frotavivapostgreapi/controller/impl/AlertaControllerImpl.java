@@ -1,5 +1,7 @@
 package org.example.frotavivapostgreapi.controller.impl;
 
+import jakarta.persistence.EntityNotFoundException;
+import jakarta.validation.Valid;
 import org.example.frotavivapostgreapi.mapper.GlobalMapper;
 import org.example.frotavivapostgreapi.controller.AlertaController;
 import org.example.frotavivapostgreapi.dto.AlertaRequestDTO;
@@ -30,17 +32,14 @@ public class AlertaControllerImpl implements AlertaController {
 
     public ResponseEntity<List<AlertaResponseDTO>> listarAlertas(@PathVariable("id_caminhao") Integer id_caminhao){
         List<AlertaResponseDTO> alertas = alertaService.listarAlertas(id_caminhao);
-        if (alertas == null) {
-            return ResponseEntity.noContent().build();
+        if (alertas.isEmpty()) {
+            throw new EntityNotFoundException("Alerta não encontrado com o id_caminhao: "+id_caminhao);
         }
         return ResponseEntity.ok(alertas);
     }
 
-    public ResponseEntity<AlertaResponseDTO> inserirAlerta(@PathVariable("id_caminhao") Integer id_caminhao, @RequestBody AlertaRequestDTO alertaRequestDTO){
+    public ResponseEntity<AlertaResponseDTO> inserirAlerta(@PathVariable("id_caminhao") Integer id_caminhao, @Valid @RequestBody AlertaRequestDTO alertaRequestDTO){
         AlertaResponseDTO alerta = alertaService.inserirAlerta(id_caminhao, alertaRequestDTO);
-        if (alerta == null) {
-            return ResponseEntity.notFound().build();
-        }
         return ResponseEntity.ok(alerta);
     }
 
