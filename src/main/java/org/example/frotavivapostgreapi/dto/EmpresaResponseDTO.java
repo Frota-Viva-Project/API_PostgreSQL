@@ -9,7 +9,7 @@ import lombok.Setter;
 public class EmpresaResponseDTO {
 
     
-    private Integer id;
+    private Long id;
 
     private String nome;
 
