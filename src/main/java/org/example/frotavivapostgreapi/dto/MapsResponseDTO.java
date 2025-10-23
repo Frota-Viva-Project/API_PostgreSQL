@@ -11,9 +11,9 @@ import java.util.Date;
 public class MapsResponseDTO {
     private Long id;
 
-    private Integer latitude;
+    private Double latitude;
 
-    private Integer longitude;
+    private Double longitude;
 
     private BigInteger capturaLocalizacaoMl;
 }

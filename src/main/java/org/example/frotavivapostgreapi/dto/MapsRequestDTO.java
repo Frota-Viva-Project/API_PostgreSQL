@@ -11,10 +11,10 @@ import java.util.Date;
 @Getter
 @Setter
 public class MapsRequestDTO {
-    @NotBlank
-    private Integer latitude;
-    @NotBlank
-    private Integer longitude;
+    @NotNull
+    private Double latitude;
+    @NotNull
+    private Double longitude;
     @NotNull
     private BigInteger capturaLocalizacaoMl;
 }

@@ -16,9 +16,9 @@ public class Maps {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Integer latitude;
+    private Double latitude;
 
-    private Integer longitude;
+    private Double longitude;
 
     @Column(name = "captura_localizacao_ml")
     private BigInteger capturaLocalizacaoMl;

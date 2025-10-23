@@ -20,8 +20,8 @@ public interface MapsRepository extends JpaRepository<Maps,Long> {
             "VALUES (:latitude, :longitude, :capturaLocalizacaoMl)"+
             "RETURNING id",
             nativeQuery = true)
-    Integer inserirMaps(@Param("latitude") Integer latitude,
-                        @Param("longitude") Integer longitude,
+    Integer inserirMaps(@Param("latitude") Double latitude,
+                        @Param("longitude") Double longitude,
                         @Param("capturaLocalizacaoMl") BigInteger capturaLocalizacaoMl);
 
     @Modifying
@@ -29,7 +29,7 @@ public interface MapsRepository extends JpaRepository<Maps,Long> {
     @Query(value = "UPDATE maps SET latitude = :latitude, longitude = :longitude, captura_localizacao_ml = :capturaLocalizacaoMl WHERE id = :id_maps",
             nativeQuery = true)
     void atualizarMaps(@Param("id") Integer id_maps,
-                       @Param("latitude") Integer latitude,
-                       @Param("longitude") Integer longitude,
+                       @Param("latitude") Double latitude,
+                       @Param("longitude") Double longitude,
                        @Param("capturaLocalizacaoMl") BigInteger capturaLocalizacaoMl);
 }
