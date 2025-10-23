@@ -36,8 +36,8 @@ public class SecurityConfig {
 
     @Bean
     public InMemoryUserDetailsManager inMemoryUserDetailsManager(PasswordEncoder encoder) {
-        UserDetails user = User.withUsername("frota-viva")
-                .password(encoder.encode("frotaviva_1_2_3"))
+        UserDetails user = User.withUsername(username)
+                .password(encoder.encode(password))
                 .roles("USER")
                 .build();
         return new InMemoryUserDetailsManager(user);
