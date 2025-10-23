@@ -1,5 +1,6 @@
 package org.example.frotavivapostgreapi.controller.impl;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.validation.Valid;
 import org.example.frotavivapostgreapi.mapper.GlobalMapper;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@SecurityRequirement(name = "bearerAuth")
 @RestController
 @RequestMapping("v1/api")
 public class RotaCaminhaoControllerImpl implements RotaCaminhaoController {
