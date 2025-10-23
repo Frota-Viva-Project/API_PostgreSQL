@@ -48,4 +48,10 @@ public interface GlobalMapper {
     ServicoResponseDTO toServicoDTO(Servico servico);
 
     Servico toServico(ServicoResponseDTO dto);
+
+    MapsResponseDTO toMapsDTO(Maps maps);
+
+    Maps toMaps(MapsResponseDTO dto);
+
+    Maps toMaps(MapsRequestDTO dto);
 }
