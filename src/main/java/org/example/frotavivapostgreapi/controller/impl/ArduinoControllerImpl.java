@@ -1,6 +1,5 @@
 package org.example.frotavivapostgreapi.controller.impl;
 
-import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.persistence.EntityNotFoundException;
 import org.example.frotavivapostgreapi.mapper.GlobalMapper;
 import org.example.frotavivapostgreapi.controller.ArduinoController;
@@ -14,7 +13,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@SecurityRequirement(name = "bearerAuth")
 @RestController
 @RequestMapping("v1/api")
 public class ArduinoControllerImpl implements ArduinoController {

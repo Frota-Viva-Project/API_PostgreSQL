@@ -1,6 +1,5 @@
 package org.example.frotavivapostgreapi.controller.impl;
 
-import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.example.frotavivapostgreapi.controller.ServicoController;
 import org.example.frotavivapostgreapi.dto.ServicoResponseDTO;
 import org.example.frotavivapostgreapi.mapper.GlobalMapper;
@@ -13,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-@SecurityRequirement(name = "bearerAuth")
 @RestController
 @RequestMapping("v1/api")
 public class ServicoControllerImpl implements ServicoController {
