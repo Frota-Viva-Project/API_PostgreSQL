@@ -1,6 +1,8 @@
 package org.example.frotavivapostgreapi.controller.impl;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.persistence.EntityNotFoundException;
+import jakarta.validation.Valid;
 import org.example.frotavivapostgreapi.controller.MapsController;
 import org.example.frotavivapostgreapi.dto.MapsRequestDTO;
 import org.example.frotavivapostgreapi.dto.MapsResponseDTO;
@@ -15,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+@SecurityRequirement(name = "bearerAuth")
 @RestController
 @RequestMapping("v1/api")
 public class MapsControllerImpl implements MapsController {
@@ -35,13 +38,13 @@ public class MapsControllerImpl implements MapsController {
     }
 
     @Override
-    public ResponseEntity<Integer> inserirMaps(@RequestBody MapsRequestDTO mapsRequestDTO) {
+    public ResponseEntity<Integer> inserirMaps(@Valid @RequestBody MapsRequestDTO mapsRequestDTO) {
         Integer id = mapsService.inserirMaps(mapsRequestDTO);
         return ResponseEntity.ok(id);
     }
 
     @Override
-    public ResponseEntity<HttpStatus> atualizarMaps(@PathVariable Integer id_maps, @RequestBody MapsRequestDTO mapsRequestDTO) {
+    public ResponseEntity<HttpStatus> atualizarMaps(@PathVariable Integer id_maps, @Valid @RequestBody MapsRequestDTO mapsRequestDTO) {
         mapsService.atualizarMaps(id_maps, mapsRequestDTO);
         return ResponseEntity.ok(HttpStatus.OK);
     }
