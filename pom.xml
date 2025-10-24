@@ -90,7 +90,6 @@
             <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
 
-<<<<<<< HEAD
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
@@ -114,8 +113,6 @@
             <scope>runtime</scope>
         </dependency>
 
-=======
->>>>>>> 4c904524f3cf96f3bd8683ad8d9104509bc682b8
     </dependencies>
 
     <build>
