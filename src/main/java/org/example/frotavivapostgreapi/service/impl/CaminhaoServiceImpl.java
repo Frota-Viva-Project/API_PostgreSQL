@@ -40,7 +40,7 @@ public class CaminhaoServiceImpl implements CaminhaoService {
         }
 
 
-        CaminhaoResponseDTO caminhao = globalMapper.toCaminhaoDTO(caminhaoRepository.findById(id_motorista));
+        CaminhaoResponseDTO caminhao = globalMapper.toCaminhaoDTO(caminhaoRepository.buscarCaminhoesPorMotorista(id_motorista));
 
         redisTemplate.opsForValue().set(cacheKey, caminhao, Duration.ofMinutes(10));
         return caminhao;
