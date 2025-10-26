@@ -13,9 +13,8 @@ import java.util.List;
 
 public interface CaminhaoRepository extends JpaRepository<Caminhao, Long> {
 
-    @Query(value = "SELECT * FROM caminhao WHERE id_motorista = :id_motorista", nativeQuery = true)
-    Caminhao findById(@PathVariable("id_motorista") Integer id_motorista);
-
+    @Query(value = "SELECT * FROM buscar_caminhao_por_motorista(:id_motorista)", nativeQuery = true)
+    Caminhao buscarCaminhoesPorMotorista(@Param("id_motorista") Integer id_motorista);
 
     @Transactional
     @Query(value = "INSERT INTO caminhao (id_motorista ,status, capacidade, placa, modelo) " +
