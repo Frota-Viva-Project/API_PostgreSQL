@@ -34,4 +34,8 @@ public class JwtUtil {
             return false;
         }
     }
+    
+    public long getExpirationTime() {
+        return expiration / 1000;
+    }
 }
