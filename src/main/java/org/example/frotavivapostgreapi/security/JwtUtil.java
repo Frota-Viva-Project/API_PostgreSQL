@@ -10,7 +10,7 @@ import java.util.Date;
 public class JwtUtil {
 
     private final Key key = Keys.hmacShaKeyFor("uma_chave_super_segura_de_32_bytes!".getBytes());
-    private final long expiration = 1000 * 60 * 60;
+    private final long expiration = 1000 * 60 * 60 * 24;
 
     public String generateToken(String username) {
         return Jwts.builder()
