@@ -47,4 +47,9 @@ public class AlertaControllerImpl implements AlertaController {
         alertaService.finalizarAlerta(id_alerta, id_caminhao);
         return ResponseEntity.ok(HttpStatus.OK);
     }
+
+    public ResponseEntity<HttpStatus> solicitarServico(@RequestParam("id_alerta") Integer id_alerta, @RequestParam("id_caminhao") Integer id_caminhao){
+        alertaService.solicitarServico(id_alerta, id_caminhao);
+        return ResponseEntity.ok(HttpStatus.OK);
+    }
 }

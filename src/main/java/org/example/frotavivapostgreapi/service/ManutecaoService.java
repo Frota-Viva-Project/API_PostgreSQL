@@ -17,4 +17,6 @@ public interface ManutecaoService {
     ManutencaoResponseDTO inseriManutencao(@RequestBody ManutencaoRequestDTO manutencaoRequestDTO, @PathVariable("id_caminhao") Integer id_caminhao);
 
     void finalizarManutencao(@Param("id_manutencao") Integer id_manutencao, @Param("id_caminhao") Integer id_caminhao);
+
+    void solicitarServico(@Param("id_manutencao") Integer id_manutencao, @Param("id_caminhao") Integer id_caminhao);
 }

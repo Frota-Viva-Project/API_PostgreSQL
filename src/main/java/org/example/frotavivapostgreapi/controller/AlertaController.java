@@ -19,4 +19,7 @@ public interface AlertaController {
 
     @PatchMapping("/alerta")
     ResponseEntity<HttpStatus> finalizarAlerta(@RequestParam("id_alerta") Integer id_alerta, @RequestParam("id_caminhao") Integer id_caminhao);
+
+    @PatchMapping("/alerta/servico")
+    ResponseEntity<HttpStatus> solicitarServico(@RequestParam("id_alerta") Integer id_alerta, @RequestParam("id_caminhao") Integer id_caminhao);
 }

@@ -17,7 +17,7 @@ public interface ManutencaoRepository extends JpaRepository<Manutencao, Long> {
 
     @Transactional
     @Query(value = "INSERT INTO manutencao (status,id_caminhao, info, titulo) " +
-            "VALUES (true, :idCaminhao, :info, :titulo)"+
+            "VALUES ('PENDENTE', :idCaminhao, :info, :titulo)"+
             "RETURNING id",
             nativeQuery = true)
     Integer inserirManutencao(@Param("idCaminhao") Integer idCaminhao,
@@ -26,7 +26,13 @@ public interface ManutencaoRepository extends JpaRepository<Manutencao, Long> {
 
     @Modifying
     @Transactional
-    @Query(value = "UPDATE manutencao SET status = false WHERE id = :id_manutencao",
+    @Query(value = "UPDATE manutencao SET status = 'CONCLUIDO' WHERE id = :id_manutencao",
             nativeQuery = true)
     void finalizarManutencao(@PathVariable("id_manutencao") Integer id_manutencao);
+
+    @Modifying
+    @Transactional
+    @Query(value = "UPDATE manutencao SET status = 'SERVICO;' WHERE id = :id_manutencao",
+            nativeQuery = true)
+    void solicitarServico(@PathVariable("id_manutencao") Integer id_manutencao);
 }

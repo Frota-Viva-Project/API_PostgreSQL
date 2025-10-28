@@ -18,7 +18,7 @@ public interface AlertaRepository extends JpaRepository<Alerta, Long> {
 
     @Transactional
     @Query(value = "INSERT INTO alerta (status,id_caminhao, descricao, titulo, categoria) " +
-            "VALUES (true, :idCaminhao, :descricao, :titulo, :categoria)"+
+            "VALUES ('PENDENTE', :idCaminhao, :descricao, :titulo, :categoria)"+
             "RETURNING id",
             nativeQuery = true)
     Integer inserirAlerta(@Param("idCaminhao") Integer idCaminhao,
@@ -28,7 +28,13 @@ public interface AlertaRepository extends JpaRepository<Alerta, Long> {
 
     @Modifying
     @Transactional
-    @Query(value = "UPDATE alerta SET status = false WHERE id = :id_alerta",
+    @Query(value = "UPDATE alerta SET status = 'CONCLUIDO' WHERE id = :id_alerta",
             nativeQuery = true)
     void finalizarAlerta(@Param("id_alerta") Integer id_alerta);
+
+    @Modifying
+    @Transactional
+    @Query(value = "UPDATE alerta SET status = 'ENVIADO PARA MANUTENÇÃO' WHERE id = :id_alerta",
+            nativeQuery = true)
+    void solicitarManutencao(@Param("id_alerta") Integer id_alerta);
 }

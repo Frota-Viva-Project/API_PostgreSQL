@@ -57,7 +57,7 @@ public class AlertaServiceImpl implements AlertaService {
 
         Alerta alerta = globalMapper.toAlerta(alertaRequestDTO);
         Integer id = alertaRepository.inserirAlerta(id_caminhao,alerta.getDescricao(),alerta.getTitulo(),alerta.getCategoria());
-        alerta.setStatus(true);
+        alerta.setStatus("PENDENTE");
         alerta.setId(id.longValue());
         return globalMapper.toAlertaDTO(alerta);
     }
@@ -67,5 +67,12 @@ public class AlertaServiceImpl implements AlertaService {
         String cacheKey = "alerta:" + id_caminhao;
         redisTemplate.delete(cacheKey);
         alertaRepository.finalizarAlerta(id_alerta);
+    }
+
+    @Override
+    public void solicitarServico(@Param("id_alert") Integer id_alerta,@Param("id_caminhao") Integer id_caminhao){
+        String cacheKey = "alerta:" + id_caminhao;
+        redisTemplate.delete(cacheKey);
+        alertaRepository.solicitarManutencao(id_alerta);
     }
 }

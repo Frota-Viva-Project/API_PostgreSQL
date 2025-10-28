@@ -15,7 +15,7 @@ public class Alerta {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Boolean status;
+    private String status;
 
     private String categoria;
 
