@@ -57,7 +57,7 @@ public class ManutencaoServiceImpl implements ManutecaoService {
 
         Manutencao manutencao = globalMapper.toManutencao(manutencaoRequestDTO);
         Integer id = manutencaoRepository.inserirManutencao(id_caminhao, manutencao.getInfo(), manutencao.getTitulo());
-        manutencao.setStatus(true);
+        manutencao.setStatus("PENDENTE");
         manutencao.setId(id.longValue());
         return globalMapper.toManutencaoDTO(manutencao);
     }
@@ -69,5 +69,14 @@ public class ManutencaoServiceImpl implements ManutecaoService {
         redisTemplate.delete(cacheKey);
 
         manutencaoRepository.finalizarManutencao(id_manutencao);
+    }
+
+    @Override
+    public void solicitarServico(@Param("id_manutencao") Integer id_manutencao, @Param("id_caminhao") Integer id_caminhao) {
+        String cacheKey = "manutencao:" + id_caminhao;
+
+        redisTemplate.delete(cacheKey);
+
+        manutencaoRepository.solicitarServico(id_manutencao);
     }
 }

@@ -12,7 +12,7 @@ public class AlertaResponseDTO {
 
     private Long id;
 
-    private Boolean status;
+    private String status;
 
     private String titulo;
 

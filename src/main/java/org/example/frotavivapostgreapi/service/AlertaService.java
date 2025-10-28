@@ -16,4 +16,6 @@ public interface AlertaService {
     AlertaResponseDTO inserirAlerta(@PathVariable("id_caminhao") Integer id_caminhao,@RequestBody AlertaRequestDTO alertaRequestDTO);
 
     void finalizarAlerta(@Param("id_alert") Integer id_alerta, @Param("id_caminhao") Integer id_caminhao);
+
+    void solicitarServico(@Param("id_alert") Integer id_alerta, @Param("id_caminhao") Integer id_caminhao);
 }

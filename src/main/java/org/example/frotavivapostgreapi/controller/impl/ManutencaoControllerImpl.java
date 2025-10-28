@@ -53,4 +53,10 @@ public class ManutencaoControllerImpl implements ManutencaoController {
 
     }
 
+    @Override
+    public ResponseEntity<HttpStatus> solicitarServico(@RequestParam Integer id_manuntecao,@RequestParam("id_caminhao") Integer id_caminhao) {
+        manutencaoService.solicitarServico(id_manuntecao,id_caminhao);
+        return ResponseEntity.ok(HttpStatus.OK);
+    }
+
 }

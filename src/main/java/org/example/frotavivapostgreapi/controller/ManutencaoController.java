@@ -20,4 +20,7 @@ public interface ManutencaoController {
 
     @PatchMapping("/manutencao/caminhao")
     ResponseEntity<HttpStatus> finalizarManutencao(@RequestParam("id_manuntecao") Integer id_manuntecao,@RequestParam("id_caminhao") Integer id_caminhao);
+
+    @PatchMapping("/manutencao/caminhao/servico")
+    ResponseEntity<HttpStatus> solicitarServico(@RequestParam("id_manuntecao") Integer id_manuntecao,@RequestParam("id_caminhao") Integer id_caminhao);
 }
