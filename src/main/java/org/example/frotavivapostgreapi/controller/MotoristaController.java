@@ -1,5 +1,10 @@
 package org.example.frotavivapostgreapi.controller;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.example.frotavivapostgreapi.dto.CaminhaoRequestDTO;
 import org.example.frotavivapostgreapi.dto.CaminhaoResponseDTO;
 import org.springframework.http.ResponseEntity;
@@ -8,7 +13,23 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 
+@Tag(name = "Motoristas", description = "Gerenciamento de motoristas e associação com caminhões")
 public interface MotoristaController {
+    
+    @Operation(summary = "Associar motorista a caminhão", 
+               description = "Associa um motorista a um caminhão de uma empresa específica")
+    @ApiResponses(value = {
+        @ApiResponse(responseCode = "201", description = "Motorista associado com sucesso"),
+        @ApiResponse(responseCode = "400", description = "Dados inválidos"),
+        @ApiResponse(responseCode = "404", description = "Motorista ou empresa não encontrados"),
+        @ApiResponse(responseCode = "409", description = "Motorista já possui caminhão associado"),
+        @ApiResponse(responseCode = "401", description = "Não autorizado")
+    })
     @PostMapping("/motorista/{id_motorista}")
-    ResponseEntity<CaminhaoResponseDTO> inserirMotorista(@RequestBody CaminhaoRequestDTO caminhaoRequestDTO, @PathVariable("id_motorista") Integer id_motorista, @RequestParam("cod_empresa") String cod_empresa);
+    ResponseEntity<CaminhaoResponseDTO> inserirMotorista(
+        @RequestBody CaminhaoRequestDTO caminhaoRequestDTO, 
+        @Parameter(description = "ID do motorista", required = true)
+        @PathVariable("id_motorista") Integer id_motorista, 
+        @Parameter(description = "Código da empresa", required = true)
+        @RequestParam("cod_empresa") String cod_empresa);
 }
