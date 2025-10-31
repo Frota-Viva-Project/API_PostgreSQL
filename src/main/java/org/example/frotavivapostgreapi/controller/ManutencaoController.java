@@ -53,7 +53,7 @@ public interface ManutencaoController {
     @PatchMapping("/manutencao/caminhao")
     ResponseEntity<HttpStatus> finalizarManutencao(
         @Parameter(description = "ID da manutenção", required = true)
-        @RequestParam("id_manuntecao") Integer id_manuntecao,
+        @RequestParam("id_manuntencao") Integer id_manuntencao,
         @Parameter(description = "ID do caminhão", required = true)
         @RequestParam("id_caminhao") Integer id_caminhao);
 
@@ -67,7 +67,7 @@ public interface ManutencaoController {
     @PatchMapping("/manutencao/caminhao/servico")
     ResponseEntity<HttpStatus> solicitarServico(
         @Parameter(description = "ID da manutenção", required = true)
-        @RequestParam("id_manuntecao") Integer id_manuntecao,
+        @RequestParam("id_manuntencao") Integer id_manuntencao,
         @Parameter(description = "ID do caminhão", required = true)
         @RequestParam("id_caminhao") Integer id_caminhao);
 }

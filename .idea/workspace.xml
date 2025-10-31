@@ -4,31 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12f55ec4-a1a7-417a-a7ab-a4adc79d188e" name="Changes" comment="Adicionando Dockerfile e o .env no gitigonore">
+    <list default="true" id="12f55ec4-a1a7-417a-a7ab-a4adc79d188e" name="Changes" comment="Testando pipeline">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/FrotaVivaPostgreApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/FrotaVivaPostgreApiApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/controller/ArduinoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/controller/ArduinoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/controller/CaminhaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/controller/CaminhaoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/controller/FcmController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/controller/FcmController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/controller/ManutencaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/controller/ManutencaoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/controller/MotoristaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/controller/MotoristaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/controller/ServicoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/controller/ServicoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/model/Arduino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/model/Arduino.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/model/Caminhao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/model/Caminhao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/model/Manutencao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/model/Manutencao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/model/Motorista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/model/Motorista.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/model/Servico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/model/Servico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/repository/ArduinoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/repository/ArduinoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/repository/CaminhaoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/repository/CaminhaoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/repository/ManutencaoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/repository/ManutencaoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/repository/MotoristaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/repository/MotoristaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/repository/ServicoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/repository/ServicoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/service/ArduinoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/service/ArduinoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/service/CaminhaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/service/CaminhaoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/service/ManutecaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/service/ManutecaoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/service/impl/ArduinoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/service/impl/ArduinoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/service/impl/CaminhaoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/service/impl/CaminhaoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/service/impl/ManutencaoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/service/impl/ManutencaoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/controller/impl/FcmControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/controller/impl/FcmControllerImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +19,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Dockerfile" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -56,8 +37,12 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Frota-Viva-Project/API_PostgreSQL.git&quot;,
-    &quot;accountId&quot;: &quot;edba5af9-78f7-465b-8a83-1bcaf0ce85c0&quot;
+    &quot;accountId&quot;: &quot;fbb6bd91-d55f-4d0f-bc62-2fe079654ae2&quot;
   }
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
 }</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -76,13 +61,16 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Unnamed.executor": "Run",
     "Maven. [clean,install,-DskipTests].executor": "Run",
     "Maven. [install,-DskipTests].executor": "Run",
     "Maven. [install].executor": "Run",
     "Maven.FrotaVivaPostgreApi [clean,install...].executor": "Run",
     "Maven.FrotaVivaPostgreApi [clean,install].executor": "Run",
+    "Maven.FrotaVivaPostgreApi [clean,package...].executor": "Run",
     "Maven.FrotaVivaPostgreApi [clean].executor": "Run",
     "Maven.FrotaVivaPostgreApi [install,-DskipTests].executor": "Run",
+    "Maven.FrotaVivaPostgreApi [install...].executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -92,9 +80,9 @@
     "RunOnceActivity.git.unshallow": "true",
     "Spring Boot.FrotaVivaPostgreApiApplication.executor": "Run",
     "com.codeium.enabled": "true",
-    "git-widget-placeholder": "TG-253-create-a-Dockerfile-for-the-project",
+    "git-widget-placeholder": "TG-256/feat/deployment-pipeline-create-workflow-in-gitHub-actions",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/arthurcruz-ieg/OneDrive - Instituto Germinare/Área de Trabalho/tech/frota_viva/API_PostgreSQL",
+    "last_opened_file_path": "C:/Users/arthurcruz-ieg/OneDrive - Instituto J&F/Área de Trabalho/tech/frota_viva/API_PostgreSQL",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -103,25 +91,85 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.sourceCode.Java",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.example.frotavivapostgreapi.security" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\arthurcruz-ieg\OneDrive - Instituto Germinare\Área de Trabalho\tech\DS2\FrotaVivaPostgreApi\src\main\java\org\example\frotavivapostgreapi" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\arthurcruz-ieg\OneDrive - Instituto J&amp;F\Área de Trabalho\tech\frota_viva\API_PostgreSQL\src\main\resources" />
+      <recent name="C:\Users\arthurcruz-ieg\OneDrive - Instituto J&amp;F\Área de Trabalho\tech\frota_viva\API_PostgreSQL" />
+      <recent name="C:\Users\arthurcruz-ieg\OneDrive - Instituto Germinare\Área de Trabalho\tech\frota_viva\API_PostgreSQL\src\main\resources" />
+      <recent name="C:\Users\arthurcruz-ieg\OneDrive - Instituto Germinare\Área de Trabalho\tech\frota_viva\API_PostgreSQL\src\main\java\org\example\frotavivapostgreapi\firebase" />
     </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn clean" />
-      <command value="mvn clean install" />
       <command value="mvn install" />
-      <command value="mvn clean install -DskipTests" />
+      <command value="mvn install -DskipTests]" />
+      <command value="mvn clean install" />
       <command value="mvn install -DskipTests" />
+      <command value=" mvn clean package -DskipTests" />
+      <command value="mvn clean package -Dskip test" />
+      <command value="mvn clean package -DskipTest" />
+      <command value="mvn clean install -DskipTests" />
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Unnamed">
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="envFilePaths">
+        <option value="$PROJECT_DIR$/.env" />
+      </option>
+      <option name="MAIN_CLASS_NAME" value="org.example.frotavivapostgreapi.FrotaVivaPostgreApiApplication" />
+      <module name="FrotaVivaPostgreApi" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="envFilePaths">
+        <option value="$PROJECT_DIR$/.env" />
+      </option>
+      <option name="MAIN_CLASS_NAME" value="org.example.frotavivapostgreapi.FrotaVivaPostgreApiApplication" />
+      <module name="FrotaVivaPostgreApi" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FrotaVivaPostgreApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="FrotaVivaPostgreApi" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.frotavivapostgreapi.FrotaVivaPostgreApiApplication" />
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="true" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+          <ENTRY IS_ENABLED="true" PARSER="env" IS_EXECUTABLE="false" PATH=".env" />
+        </ENTRIES>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="FrotaVivaPostgreApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="FrotaVivaPostgreApi" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.frotavivapostgreapi.FrotaVivaPostgreApiApplication" />
@@ -146,12 +194,16 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Application.Unnamed" />
+      <item itemvalue="Spring Boot.FrotaVivaPostgreApiApplication" />
+    </list>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.25557.131" />
-        <option value="bundled-js-predefined-d6986cc7102b-b598e85cdad2-JavaScript-IU-252.25557.131" />
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.27397.103" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-IU-252.27397.103" />
       </set>
     </attachedChunks>
   </component>
@@ -191,7 +243,54 @@
       <workItem from="1757502233164" duration="1448000" />
       <workItem from="1757509246422" duration="1450000" />
       <workItem from="1757590669659" duration="9664000" />
-      <workItem from="1757682350990" duration="4584000" />
+      <workItem from="1757682350990" duration="5762000" />
+      <workItem from="1758111324416" duration="676000" />
+      <workItem from="1758115569403" duration="1119000" />
+      <workItem from="1758203853668" duration="36000" />
+      <workItem from="1758204551211" duration="21000" />
+      <workItem from="1758395523196" duration="1818000" />
+      <workItem from="1758406010448" duration="1386000" />
+      <workItem from="1758407820500" duration="3345000" />
+      <workItem from="1758538628297" duration="5073000" />
+      <workItem from="1758622223837" duration="1555000" />
+      <workItem from="1758623822215" duration="4778000" />
+      <workItem from="1758712062631" duration="1647000" />
+      <workItem from="1758715075614" duration="14524000" />
+      <workItem from="1759141846576" duration="14055000" />
+      <workItem from="1759312782757" duration="6043000" />
+      <workItem from="1759346524079" duration="2863000" />
+      <workItem from="1759349468552" duration="1038000" />
+      <workItem from="1759405547358" duration="5491000" />
+      <workItem from="1759499746266" duration="5021000" />
+      <workItem from="1759516135921" duration="4000" />
+      <workItem from="1759516244855" duration="5024000" />
+      <workItem from="1759604433531" duration="21033000" />
+      <workItem from="1759924056003" duration="1363000" />
+      <workItem from="1759925472264" duration="782000" />
+      <workItem from="1759928759867" duration="5000" />
+      <workItem from="1759928832030" duration="4100000" />
+      <workItem from="1760029435127" duration="7835000" />
+      <workItem from="1760300347885" duration="415000" />
+      <workItem from="1760300819215" duration="905000" />
+      <workItem from="1760403241546" duration="74000" />
+      <workItem from="1760403343630" duration="1462000" />
+      <workItem from="1760435309749" duration="5171000" />
+      <workItem from="1760491336500" duration="37719000" />
+      <workItem from="1760706354614" duration="2000" />
+      <workItem from="1760706496266" duration="2571000" />
+      <workItem from="1760711145294" duration="1822000" />
+      <workItem from="1760814934915" duration="4214000" />
+      <workItem from="1760827482921" duration="1228000" />
+      <workItem from="1760920458934" duration="14526000" />
+      <workItem from="1761012066237" duration="2609000" />
+      <workItem from="1761046561872" duration="2797000" />
+      <workItem from="1761053412216" duration="3385000" />
+      <workItem from="1761127474153" duration="4479000" />
+      <workItem from="1761134293277" duration="22849000" />
+      <workItem from="1761430570518" duration="1351000" />
+      <workItem from="1761431948547" duration="6538000" />
+      <workItem from="1761823722844" duration="2588000" />
+      <workItem from="1761831803810" duration="6689000" />
     </task>
     <task id="LOCAL-00001" summary="Adicionando template de pull request">
       <option name="closed" value="true" />
@@ -217,51 +316,268 @@
       <option name="project" value="LOCAL" />
       <updated>1756388742759</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Adicionando ultimos endpoint GET ainda sem DTO">
+      <option name="closed" value="true" />
+      <created>1758625735215</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1758625735215</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Conrcetando deploy">
+      <option name="closed" value="true" />
+      <created>1758723175381</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1758723175381</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Adicionando ultimos endpoint GET">
+      <option name="closed" value="true" />
+      <created>1759614816486</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1759614816486</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Adicionando metodo post de rota">
+      <option name="closed" value="true" />
+      <created>1759615632193</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1759615632193</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Adicionando últimos metodos posts">
+      <option name="closed" value="true" />
+      <created>1760626075735</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1760626075735</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Adicionando todos metodos PATCH">
+      <option name="closed" value="true" />
+      <created>1760818240131</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1760818240131</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Adicionando ManipuladorGlobalExcecoes,e validando entradas da API">
+      <option name="closed" value="true" />
+      <created>1760967974955</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1760967974955</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Adicionando endpoint de localização para o maps">
+      <option name="closed" value="true" />
+      <created>1761144246891</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1761144246891</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Adicionando autenticação via token">
+      <option name="closed" value="true" />
+      <created>1761229260715</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1761229260715</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Adicionando env na autenticação via token">
+      <option name="closed" value="true" />
+      <created>1761229703010</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1761229703010</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Ajustando o env na autenticação">
+      <option name="closed" value="true" />
+      <created>1761231580801</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1761231580801</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Arrumando endpoint do maps">
+      <option name="closed" value="true" />
+      <created>1761232035649</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1761232035649</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Retirando intens dessnesesarios no momento">
+      <option name="closed" value="true" />
+      <created>1761232291596</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1761232291596</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Retirando outros intens dessnesesarios no momento">
+      <option name="closed" value="true" />
+      <created>1761232659758</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1761232659758</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Merge Update">
+      <option name="closed" value="true" />
+      <created>1761299969190</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1761299969190</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Adicionando function na api">
+      <option name="closed" value="true" />
+      <created>1761429606806</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1761429606807</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Adicionando autenticação para o mobile">
+      <option name="closed" value="true" />
+      <created>1761444685131</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1761444685131</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Mudando expiração do token para 24h">
+      <option name="closed" value="true" />
+      <created>1761564382002</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1761564382002</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Alterando o status para string, e alterando os metodos">
+      <option name="closed" value="true" />
+      <created>1761649734505</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1761649734505</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Adicionando método de notificação no mobile">
+      <option name="closed" value="true" />
+      <created>1761745308017</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1761745308017</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Adicionando documentação swagger">
+      <option name="closed" value="true" />
+      <created>1761751573976</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1761751573976</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Adicionando pipeline">
+      <option name="closed" value="true" />
+      <created>1761832359281</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1761832359281</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Ajustando a pipeline">
+      <option name="closed" value="true" />
+      <created>1761833147858</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1761833147858</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Arrumando build da pipeline">
+      <option name="closed" value="true" />
+      <created>1761834213150</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1761834213150</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Arrumando a versão do java da pipeline">
+      <option name="closed" value="true" />
+      <created>1761834866270</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1761834866270</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Testando pipeline">
+      <option name="closed" value="true" />
+      <created>1761835414653</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1761835414653</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="initial commit" />
-    <MESSAGE value="Adicionando template de pull request" />
-    <MESSAGE value="Adicionando variaveis de ambiente .env" />
-    <MESSAGE value="Adicionando Dockerfile e o .env no gitigonore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adicionando Dockerfile e o .env no gitigonore" />
+    <MESSAGE value="Conrcetando deploy" />
+    <MESSAGE value="Adicionando ultimos endpoint GET" />
+    <MESSAGE value="Adicionando metodo post de rota" />
+    <MESSAGE value="Adicionando últimos metodos posts" />
+    <MESSAGE value="Adicionando todos metodos PATCH" />
+    <MESSAGE value="Adicionando ManipuladorGlobalExcecoes,e validando entradas da API" />
+    <MESSAGE value="Adicionando endpoint de localização para o maps" />
+    <MESSAGE value="Adicionando autenticação via token" />
+    <MESSAGE value="Adicionando env na autenticação via token" />
+    <MESSAGE value="Ajustando o env na autenticação" />
+    <MESSAGE value="Arrumando endpoint do maps" />
+    <MESSAGE value="Retirando intens dessnesesarios no momento" />
+    <MESSAGE value="Retirando outros intens dessnesesarios no momento" />
+    <MESSAGE value="Merge Update" />
+    <MESSAGE value="Adicionando function na api" />
+    <MESSAGE value="Adicionando autenticação para o mobile" />
+    <MESSAGE value="Mudando expiração do token para 24h" />
+    <MESSAGE value="Alterando o status para string, e alterando os metodos" />
+    <MESSAGE value="Adicionando método de notificação no mobile" />
+    <MESSAGE value="Adicionando documentação swagger" />
+    <MESSAGE value="Adicionando pipeline" />
+    <MESSAGE value="Ajustando a pipeline" />
+    <MESSAGE value="Arrumando build da pipeline" />
+    <MESSAGE value="Arrumando a versão do java da pipeline" />
+    <MESSAGE value="Testando pipeline" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testando pipeline" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/controller/impl/ArduinoControllerImpl.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/controller/impl/CaminhaoControllerImpl.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/controller/CaminhaoController.java</url>
-          <line>15</line>
-          <properties class="org.example.frotavivapostgreapi.controller.CaminhaoController">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/frotavivapostgreapi/repository/ArduinoRepository.java</url>
-          <line>10</line>
-          <properties class="org.example.frotavivapostgreapi.repository.ArduinoRepository">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="org.springframework.aop.framework.JdkDynamicAopProxy" memberName="advised" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
