@@ -23,10 +23,6 @@ public class SwaggerConfig {
                         .description("API completa para gerenciamento de frota de caminhões com monitoramento em tempo real, " +
                                    "alertas automáticos, manutenções programadas e notificações push. " +
                                    "Inclui integração com sensores Arduino e Firebase para autenticação e notificações."))
-                .servers(List.of(
-                        new Server()
-                                .url("http://localhost:8080")
-                                .description("Servidor Local")))
                 .components(new Components()
                         .addSecuritySchemes("bearerAuth", new SecurityScheme()
                                 .type(SecurityScheme.Type.HTTP)
