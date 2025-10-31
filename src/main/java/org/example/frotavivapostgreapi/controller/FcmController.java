@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@RequestMapping("v1/api/fcm")
 @Tag(name = "FCM - Notificações Push", description = "Gerenciamento de notificações push via Firebase Cloud Messaging")
 public interface FcmController {
     
