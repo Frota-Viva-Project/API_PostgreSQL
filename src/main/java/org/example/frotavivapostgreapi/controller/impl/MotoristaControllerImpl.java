@@ -33,4 +33,8 @@ public class MotoristaControllerImpl implements MotoristaController {
         return ResponseEntity.ok(motoristaService.inseriMotorista(id_motorista, caminhaoRequestDTO, cod_empresa));
     }
 
+    public ResponseEntity<Integer> buscarMotoristaPorCaminhao(@PathVariable("id") Integer id){
+        return ResponseEntity.ok(motoristaService.buscarMotoristaPorCaminhao(id));
+    }
+
 }
