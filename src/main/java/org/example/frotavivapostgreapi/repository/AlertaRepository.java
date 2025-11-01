@@ -34,7 +34,7 @@ public interface AlertaRepository extends JpaRepository<Alerta, Long> {
 
     @Modifying
     @Transactional
-    @Query(value = "UPDATE alerta SET status = 'ENVIADO PARA MANUTENÇÃO' WHERE id = :id_alerta",
+    @Query(value = "UPDATE alerta SET status = 'MANUTENÇÃO' WHERE id = :id_alerta",
             nativeQuery = true)
     void solicitarManutencao(@Param("id_alerta") Integer id_alerta);
 }
