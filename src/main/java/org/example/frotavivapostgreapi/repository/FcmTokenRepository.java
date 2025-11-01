@@ -20,7 +20,7 @@ public interface FcmTokenRepository extends JpaRepository<FcmToken, Long> {
 
     @Modifying
     @Transactional
-    @Query(value = "UPDATE fcm_tokens SET Ativo = false WHERE fcmToken = :fcmToken", nativeQuery = true)
+    @Query(value = "UPDATE fcm_tokens SET Ativo = false WHERE fcm_token = :fcmToken", nativeQuery = true)
     void deactivateToken(@Param("fcmToken") String fcmToken);
 
     @Modifying
