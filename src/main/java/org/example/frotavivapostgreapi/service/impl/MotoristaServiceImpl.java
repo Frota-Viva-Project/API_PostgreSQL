@@ -42,4 +42,7 @@ public class MotoristaServiceImpl implements MotoristaService{
         return globalMapper.toCaminhaoDTO(caminhao);
     }
 
+    public Integer buscarMotoristaPorCaminhao(@PathVariable("id") Integer id){
+        return motoristaRepository.buscarMotoristaPorCaminhao(id);
+    }
 }

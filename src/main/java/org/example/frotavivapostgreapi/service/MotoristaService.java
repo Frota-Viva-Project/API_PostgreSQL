@@ -8,4 +8,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 public interface MotoristaService {
     CaminhaoResponseDTO inseriMotorista(@PathVariable("id_motorista") Integer id_motorista, @RequestBody CaminhaoRequestDTO caminhaoRequestDTO, @RequestParam("cod_empresa") String cod_empresa);
+
+    Integer buscarMotoristaPorCaminhao(@PathVariable("id") Integer id);
 }

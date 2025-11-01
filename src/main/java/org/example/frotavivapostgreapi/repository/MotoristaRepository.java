@@ -17,4 +17,8 @@ public interface MotoristaRepository extends JpaRepository<Motorista, Long> {
     Integer inserirMotorista(@Param("id") Integer id,
                            @Param("id_empresa") Long id_empresa,
                            @Param("cod_empresa") String cod_empresa);
+
+    @Query(value = "SELECT motorista.id FROM motorista JOIN caminhao c ON motorista.id = c.id_motorista WHERE c.id = :id",
+            nativeQuery = true)
+    Integer buscarMotoristaPorCaminhao(@Param("id") Integer id);
 }

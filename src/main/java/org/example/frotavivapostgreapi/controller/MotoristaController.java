@@ -8,10 +8,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import org.example.frotavivapostgreapi.dto.CaminhaoRequestDTO;
 import org.example.frotavivapostgreapi.dto.CaminhaoResponseDTO;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 @Tag(name = "Motoristas", description = "Gerenciamento de motoristas e associação com caminhões")
 public interface MotoristaController {
@@ -32,4 +29,17 @@ public interface MotoristaController {
         @PathVariable("id_motorista") Integer id_motorista, 
         @Parameter(description = "Código da empresa", required = true)
         @RequestParam("cod_empresa") String cod_empresa);
+
+    @Operation(summary = "Buscar motorista por caminhão",
+               description = "Busca o motorista associado a um caminhão específico")
+    @ApiResponses(value = {
+        @ApiResponse(responseCode = "200", description = "Motorista encontrado com sucesso"),
+        @ApiResponse(responseCode = "404", description = "Caminhão não encontrado"),
+        @ApiResponse(responseCode = "401", description = "Não autorizado")
+    })
+    @GetMapping("/motorista/{id}")
+    ResponseEntity<Integer> buscarMotoristaPorCaminhao(
+        @Parameter(description = "ID do caminhão", required = true)
+        @PathVariable("id") Integer id);
+
 }
