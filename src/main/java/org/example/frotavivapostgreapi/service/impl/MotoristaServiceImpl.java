@@ -5,6 +5,7 @@ import org.example.frotavivapostgreapi.dto.CaminhaoResponseDTO;
 import org.example.frotavivapostgreapi.mapper.GlobalMapper;
 import org.example.frotavivapostgreapi.model.Caminhao;
 import org.example.frotavivapostgreapi.model.Empresa;
+import org.example.frotavivapostgreapi.model.Motorista;
 import org.example.frotavivapostgreapi.repository.CaminhaoRepository;
 import org.example.frotavivapostgreapi.repository.EmpresaRepository;
 import org.example.frotavivapostgreapi.repository.MotoristaRepository;
@@ -32,13 +33,16 @@ public class MotoristaServiceImpl implements MotoristaService{
         this.caminhaoRepository = caminhaoRepository;
     }
 
-    public CaminhaoResponseDTO inseriMotorista(@PathVariable("id_motorista") Integer id_motorista, @RequestBody CaminhaoRequestDTO caminhaoRequestDTO , @RequestParam("cod_empresa") String cod_empresa){
+    public CaminhaoResponseDTO inseriMotorista(@RequestBody CaminhaoRequestDTO caminhaoRequestDTO , @RequestParam("cod_empresa") String cod_empresa){
         Empresa empresa = empresaRepository.findByCodEmpresa(cod_empresa);
-        motoristaRepository.inserirMotorista(id_motorista, empresa.getId(), cod_empresa);
+        Integer id_motorista = motoristaRepository.inserirMotorista(empresa.getId(), cod_empresa);
         Caminhao caminhao = globalMapper.toCaminhao(caminhaoRequestDTO);
         Integer id = caminhaoRepository.inserirCaminhao(id_motorista, caminhao.getCapacidade() ,caminhao.getPlaca(), caminhao.getModelo());
         caminhao.setStatus("ATIVO");
         caminhao.setId(id.longValue());
+        Motorista motorista = new Motorista();
+        motorista.setId(id_motorista.longValue());
+        caminhao.setMotorista(motorista);
         return globalMapper.toCaminhaoDTO(caminhao);
     }
 
