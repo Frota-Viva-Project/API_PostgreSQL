@@ -24,9 +24,7 @@ public interface MotoristaController {
     })
     @PostMapping("/motorista/{id_motorista}")
     ResponseEntity<CaminhaoResponseDTO> inserirMotorista(
-        @RequestBody CaminhaoRequestDTO caminhaoRequestDTO, 
-        @Parameter(description = "ID do motorista", required = true)
-        @PathVariable("id_motorista") Integer id_motorista, 
+        @RequestBody CaminhaoRequestDTO caminhaoRequestDTO,
         @Parameter(description = "Código da empresa", required = true)
         @RequestParam("cod_empresa") String cod_empresa);
 

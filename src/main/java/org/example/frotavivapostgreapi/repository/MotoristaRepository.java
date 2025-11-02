@@ -10,12 +10,11 @@ import org.springframework.data.jpa.repository.Query;
 public interface MotoristaRepository extends JpaRepository<Motorista, Long> {
 
     @Transactional
-    @Query(value = "INSERT INTO motorista (id, id_empresa, cod_empresa) " +
-            "VALUES (:id, :id_empresa, :cod_empresa)"+
+    @Query(value = "INSERT INTO motorista (id_empresa, cod_empresa) " +
+            "VALUES (:id_empresa, :cod_empresa)"+
             "RETURNING id",
             nativeQuery = true)
-    Integer inserirMotorista(@Param("id") Integer id,
-                           @Param("id_empresa") Long id_empresa,
+    Integer inserirMotorista(@Param("id_empresa") Long id_empresa,
                            @Param("cod_empresa") String cod_empresa);
 
     @Query(value = "SELECT motorista.id FROM motorista JOIN caminhao c ON motorista.id = c.id_motorista WHERE c.id = :id",

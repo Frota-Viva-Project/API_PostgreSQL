@@ -29,8 +29,8 @@ public class MotoristaControllerImpl implements MotoristaController {
     }
 
 
-    public ResponseEntity<CaminhaoResponseDTO> inserirMotorista(@Valid @RequestBody CaminhaoRequestDTO caminhaoRequestDTO, @PathVariable("id_motorista") Integer id_motorista, @RequestParam("cod_empresa") String cod_empresa){
-        return ResponseEntity.ok(motoristaService.inseriMotorista(id_motorista, caminhaoRequestDTO, cod_empresa));
+    public ResponseEntity<CaminhaoResponseDTO> inserirMotorista(@Valid @RequestBody CaminhaoRequestDTO caminhaoRequestDTO, @RequestParam("cod_empresa") String cod_empresa){
+        return ResponseEntity.ok(motoristaService.inseriMotorista(caminhaoRequestDTO, cod_empresa));
     }
 
     public ResponseEntity<Integer> buscarMotoristaPorCaminhao(@PathVariable("id") Integer id){
